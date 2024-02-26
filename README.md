@@ -1,4 +1,4 @@
-# Team Project Name
+# Aggregation of disease terms in ClinVar
 
 List of participants and affiliations:
 - Participant, Affiliation (Team Leader)
