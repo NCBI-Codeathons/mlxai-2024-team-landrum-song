@@ -1,8 +1,15 @@
-# Aggregation of disease terms in ClinVar
+# Aggregation of diseBenjamin Keslerase terms in ClinVar
 
 List of participants and affiliations:
-- Participant, Affiliation (Team Leader)
-- Participant, Affiliation
+- Melissa Landrum, NIH/NCBI (Co-Team Leader)
+- Lauren Edgar, NIH/NHGRI
+- Benjamin Kesler, Vanderbilt University
+- Nicholas Minor, University of Wisconsin
+- Michael Muchow, Unaffiliated
+- Rebecca Orris, NIH, NCBI
+- Hasitha Premathilake, NIH, NIA
+- Guangfeng Song, NIH/NCBI
+- Wengang Zhang, NIH
 
 ## Project Goals
 
