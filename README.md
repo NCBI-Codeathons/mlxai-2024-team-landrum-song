@@ -1,4 +1,4 @@
-# Aggregation of diseBenjamin Keslerase terms in ClinVar
+# Aggregation of disease terms in ClinVar
 
 List of participants and affiliations:
 - Melissa Landrum, NIH/NCBI (Co-Team Leader)
