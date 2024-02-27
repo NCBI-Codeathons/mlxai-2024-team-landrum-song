@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "2024-team-landrum-song"
+version = "0.1.0"
+description = "Naming for human genetic diseases is complex. Diseases may be named for the phenotype; other information may be alluded to including the relevant gene, mode of inheritance, or the mechanism of disease. Diseases may be described at a high level with a generic name, or at a lower level with a more specific name; however, in the context of a variant in a specific gene, these differences may not be considered important. ClinVar data would be easier to ingest in bulk and to read in web displays if there were a meaningful way to aggregate diseases that effectively mean the same thing in the context of a gene."
+authors = ["Nicholas Minor <nrminor@wisc.edu>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pandas = "^2.2.1"
+polars = "^0.20.11"
+biopython = "^1.83"
+rich = "^13.7.0"
+flytekit = "^1.10.7"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.2.2"
+jupyter = "^1.0.0"
+marimo = "^0.2.8"
+quarto = "^0.1.0"
+ipykernel = "^6.29.3"
+pdoc = "^14.4.0"
+pre-commit = "^3.6.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
