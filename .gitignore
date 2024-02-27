@@ -90,8 +90,8 @@ scratch/
 .DS_Store
 ._*
 
-scratch/
-sandbox/
+scratch*
+sandbox*
 data/
 input/
 test/
