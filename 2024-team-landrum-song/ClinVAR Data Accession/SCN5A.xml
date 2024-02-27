@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE eSummaryResult PUBLIC "-//NLM//DTD esummary clinvar 20240131//EN" "https://eutils.ncbi.nlm.nih.gov/eutils/dtd/20240131/esummary_clinvar.dtd">
+<eSummaryResult>
+<DocumentSummarySet status="OK">
+<DbBuild>Build240222-0400.1</DbBuild>
+
+<DocumentSummary uid="2919193">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002919193</accession>
+	<accession_version>VCV002919193.</accession_version>
+	<title>NM_000335.5(SCN5A):c.3325G&gt;A (p.Ala1109Thr)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3075117</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000335.5(SCN5A):c.3325G&gt;A (p.Ala1109Thr)</variation_name>
+			<cdna_change>c.3325G&gt;A</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38579396</start>
+					<stop>38579396</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38579396</display_start>
+					<display_stop>38579396</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38620887</start>
+					<stop>38620887</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38620887</display_start>
+					<display_stop>38620887</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000003.12:38579395:C:T</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004561148</string>
+		</scv>
+		<rcv>
+			<string>RCV003739289</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Uncertain significance</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C3661900</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>not provided</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LOC110121269</gene_sort>
+	<chr_sort>03</chr_sort>
+	<location_sort>00000000000038579396</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LOC110121269</symbol>
+			<GeneID>110121269</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+		<gene>
+			<symbol>SCN5A</symbol>
+			<GeneID>6331</GeneID>
+			<strand>-</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>missense variant</string>
+		<string>non-coding transcript variant</string>
+		<string>intron variant</string>
+	</molecular_consequence_list>
+	<protein_change>A1110T, A1109T</protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2919124">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002919124</accession>
+	<accession_version>VCV002919124.</accession_version>
+	<title>NM_000335.5(SCN5A):c.3043G&gt;A (p.Glu1015Lys)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3075048</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000335.5(SCN5A):c.3043G&gt;A (p.Glu1015Lys)</variation_name>
+			<cdna_change>c.3043G&gt;A</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38581116</start>
+					<stop>38581116</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38581116</display_start>
+					<display_stop>38581116</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38622607</start>
+					<stop>38622607</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38622607</display_start>
+					<display_stop>38622607</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000003.12:38581115:C:T</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004561065</string>
+		</scv>
+		<rcv>
+			<string>RCV003739267</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Uncertain significance</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C3661900</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>not provided</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LOC110121269</gene_sort>
+	<chr_sort>03</chr_sort>
+	<location_sort>00000000000038581116</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LOC110121269</symbol>
+			<GeneID>110121269</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+		<gene>
+			<symbol>SCN5A</symbol>
+			<GeneID>6331</GeneID>
+			<strand>-</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>missense variant</string>
+		<string>non-coding transcript variant</string>
+	</molecular_consequence_list>
+	<protein_change>E1015K</protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2918703">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002918703</accession>
+	<accession_version>VCV002918703.</accession_version>
+	<title>NM_000335.5(SCN5A):c.482+12C&gt;T</title>
+	<variation_set>
+		<variation>
+			<measure_id>3077454</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000335.5(SCN5A):c.482+12C&gt;T</variation_name>
+			<cdna_change>NM_000335.5(SCN5A):c.482+12C&gt;T</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38622388</start>
+					<stop>38622388</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38622388</display_start>
+					<display_stop>38622388</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38663879</start>
+					<stop>38663879</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38663879</display_start>
+					<display_stop>38663879</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000003.12:38622387:G:A</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004554314</string>
+		</scv>
+		<rcv>
+			<string>RCV003739126</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C3661900</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>not provided</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>SCN5A</gene_sort>
+	<chr_sort>03</chr_sort>
+	<location_sort>00000000000038622388</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>SCN5A</symbol>
+			<GeneID>6331</GeneID>
+			<strand>-</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>intron variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2918472">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002918472</accession>
+	<accession_version>VCV002918472.</accession_version>
+	<title>NM_000335.5(SCN5A):c.4026C&gt;A (p.Ile1342=)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3080592</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000335.5(SCN5A):c.4026C&gt;A (p.Ile1342=)</variation_name>
+			<cdna_change>c.4026C&gt;A</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38560363</start>
+					<stop>38560363</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38560363</display_start>
+					<display_stop>38560363</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38601854</start>
+					<stop>38601854</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38601854</display_start>
+					<display_stop>38601854</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000003.12:38560362:G:T</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004553695</string>
+		</scv>
+		<rcv>
+			<string>RCV003739051</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C3661900</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>not provided</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>SCN5A</gene_sort>
+	<chr_sort>03</chr_sort>
+	<location_sort>00000000000038560363</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>SCN5A</symbol>
+			<GeneID>6331</GeneID>
+			<strand>-</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>synonymous variant</string>
+		<string>non-coding transcript variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2917812">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002917812</accession>
+	<accession_version>VCV002917812.</accession_version>
+	<title>NM_000335.5(SCN5A):c.935-13G&gt;A</title>
+	<variation_set>
+		<variation>
+			<measure_id>3072013</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000335.5(SCN5A):c.935-13G&gt;A</variation_name>
+			<cdna_change>NM_000335.5(SCN5A):c.935-13G&gt;A</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38608227</start>
+					<stop>38608227</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38608227</display_start>
+					<display_stop>38608227</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38649718</start>
+					<stop>38649718</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38649718</display_start>
+					<display_stop>38649718</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000003.12:38608226:C:T</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004554283</string>
+		</scv>
+		<rcv>
+			<string>RCV003737860</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C3661900</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>not provided</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>SCN5A</gene_sort>
+	<chr_sort>03</chr_sort>
+	<location_sort>00000000000038608227</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>SCN5A</symbol>
+			<GeneID>6331</GeneID>
+			<strand>-</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>intron variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2916021">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002916021</accession>
+	<accession_version>VCV002916021.</accession_version>
+	<title>NM_000335.5(SCN5A):c.4810+18C&gt;G</title>
+	<variation_set>
+		<variation>
+			<measure_id>3071530</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000335.5(SCN5A):c.4810+18C&gt;G</variation_name>
+			<cdna_change>NM_000335.5(SCN5A):c.4810+18C&gt;G</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38554261</start>
+					<stop>38554261</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38554261</display_start>
+					<display_stop>38554261</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38595752</start>
+					<stop>38595752</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38595752</display_start>
+					<display_stop>38595752</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000003.12:38554260:G:C</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004551144</string>
+		</scv>
+		<rcv>
+			<string>RCV003740255</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C3661900</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>not provided</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>SCN5A</gene_sort>
+	<chr_sort>03</chr_sort>
+	<location_sort>00000000000038554261</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>SCN5A</symbol>
+			<GeneID>6331</GeneID>
+			<strand>-</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>intron variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2915169">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002915169</accession>
+	<accession_version>VCV002915169.</accession_version>
+	<title>NM_000335.5(SCN5A):c.3396G&gt;A (p.Glu1132=)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3076539</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000335.5(SCN5A):c.3396G&gt;A (p.Glu1132=)</variation_name>
+			<cdna_change>c.3396G&gt;A</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38618264</start>
+					<stop>38618264</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38618264</display_start>
+					<display_stop>38618264</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38576773</start>
+					<stop>38576773</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38576773</display_start>
+					<display_stop>38576773</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000003.12:38576772:C:T</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004551055</string>
+		</scv>
+		<rcv>
+			<string>RCV003735978</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C3661900</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>not provided</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>SCN5A</gene_sort>
+	<chr_sort>03</chr_sort>
+	<location_sort>00000000000038576773</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>SCN5A</symbol>
+			<GeneID>6331</GeneID>
+			<strand>-</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>synonymous variant</string>
+		<string>non-coding transcript variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2914406">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002914406</accession>
+	<accession_version>VCV002914406.</accession_version>
+	<title>NM_000335.5(SCN5A):c.5331C&gt;T (p.Ala1777=)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3071217</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000335.5(SCN5A):c.5331C&gt;T (p.Ala1777=)</variation_name>
+			<cdna_change>c.5331C&gt;T</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38551038</start>
+					<stop>38551038</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38551038</display_start>
+					<display_stop>38551038</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38592529</start>
+					<stop>38592529</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38592529</display_start>
+					<display_stop>38592529</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000003.12:38551037:G:A</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004548783</string>
+		</scv>
+		<rcv>
+			<string>RCV003735712</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C3661900</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>not provided</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>SCN5A</gene_sort>
+	<chr_sort>03</chr_sort>
+	<location_sort>00000000000038551038</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>SCN5A</symbol>
+			<GeneID>6331</GeneID>
+			<strand>-</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>synonymous variant</string>
+		<string>non-coding transcript variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2913886">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002913886</accession>
+	<accession_version>VCV002913886.</accession_version>
+	<title>NM_000335.5(SCN5A):c.3073G&gt;A (p.Glu1025Lys)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3073740</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000335.5(SCN5A):c.3073G&gt;A (p.Glu1025Lys)</variation_name>
+			<cdna_change>c.3073G&gt;A</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38581086</start>
+					<stop>38581086</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38581086</display_start>
+					<display_stop>38581086</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38622577</start>
+					<stop>38622577</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38622577</display_start>
+					<display_stop>38622577</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000003.12:38581085:C:T</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004549835</string>
+		</scv>
+		<rcv>
+			<string>RCV003735579</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Uncertain significance</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C3661900</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>not provided</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LOC110121269</gene_sort>
+	<chr_sort>03</chr_sort>
+	<location_sort>00000000000038581086</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LOC110121269</symbol>
+			<GeneID>110121269</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+		<gene>
+			<symbol>SCN5A</symbol>
+			<GeneID>6331</GeneID>
+			<strand>-</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>missense variant</string>
+		<string>non-coding transcript variant</string>
+	</molecular_consequence_list>
+	<protein_change>E1025K</protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2913074">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002913074</accession>
+	<accession_version>VCV002913074.</accession_version>
+	<title>NM_000335.5(SCN5A):c.1516A&gt;G (p.Met506Val)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3079114</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000335.5(SCN5A):c.1516A&gt;G (p.Met506Val)</variation_name>
+			<cdna_change>c.1516A&gt;G</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38604731</start>
+					<stop>38604731</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38604731</display_start>
+					<display_stop>38604731</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>3</chr>
+					<band>3p22.2</band>
+					<start>38646222</start>
+					<stop>38646222</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>38646222</display_start>
+					<display_stop>38646222</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000003.12:38604730:T:C</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004547223</string>
+		</scv>
+		<rcv>
+			<string>RCV003738765</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Uncertain significance</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C3661900</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>not provided</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>SCN5A</gene_sort>
+	<chr_sort>03</chr_sort>
+	<location_sort>00000000000038604731</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>SCN5A</symbol>
+			<GeneID>6331</GeneID>
+			<strand>-</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>missense variant</string>
+		<string>non-coding transcript variant</string>
+	</molecular_consequence_list>
+	<protein_change>M506V</protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+</DocumentSummarySet>
+</eSummaryResult>
