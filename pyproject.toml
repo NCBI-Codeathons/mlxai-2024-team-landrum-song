@@ -13,6 +13,7 @@ polars = "^0.20.11"
 biopython = "^1.83"
 rich = "^13.7.0"
 flytekit = "^1.10.7"
+lxml = "^5.1.0"
 
 
 [tool.poetry.group.dev.dependencies]
