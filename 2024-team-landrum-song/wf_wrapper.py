@@ -8,7 +8,7 @@ import argparse
 import functools
 from pathlib import Path
 from typing import Tuple
-# from .clinvar_unfiltered_disease_name import search_and_save_gene_info_combined
+# from .clinvar_unfiltered_disease_name import pull_clinvar_xml
 
 from flytekit import task, workflow, map_task
 from rich import print as rprint

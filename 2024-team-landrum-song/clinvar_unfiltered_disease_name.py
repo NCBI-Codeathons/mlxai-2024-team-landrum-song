@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 from Bio import Entrez
 
 
-def search_and_save_gene_info_combined(gene: str, email: str, only_first: bool) -> None:
+def pull_clinvar_xml(gene: str, email: str, only_first: bool) -> str:
     """
     TODO
     """
@@ -37,6 +37,13 @@ def search_and_save_gene_info_combined(gene: str, email: str, only_first: bool) 
     # Parse the XML data
     root = ET.fromstring(xml_data)
 
+    return root
+
+
+def save_clinvar_condition_data(root, gene: str):
+    """
+    TODO
+    """
     # Extract ClassifiedCondition elements
     classified_conditions = [
         condition.text
@@ -55,6 +62,8 @@ def search_and_save_gene_info_combined(gene: str, email: str, only_first: bool) 
             file.write(condition + "\n")
     print(f"Saved classified conditions to {classified_filename}")
 
+    return classified_filename
+
 
 def main() -> None:
     """
@@ -67,7 +76,9 @@ def main() -> None:
     only_first = False  # To only search one gene and the first ID for testing set only_first to True
 
     for gene in genes:
-        search_and_save_gene_info_combined(gene, email, only_first=only_first)
+        xml_data = pull_clinvar_xml(gene, email, only_first=only_first)
+        output_name = save_clinvar_condition_data(xml_data, gene)
+        print(f"Saving output to {output_name}")
 
 
 if __name__ == "__main__":
