@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE eSummaryResult PUBLIC "-//NLM//DTD esummary clinvar 20240131//EN" "https://eutils.ncbi.nlm.nih.gov/eutils/dtd/20240131/esummary_clinvar.dtd">
+<eSummaryResult>
+<DocumentSummarySet status="OK">
+<DbBuild>Build240222-0400.1</DbBuild>
+
+<DocumentSummary uid="2921174">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002921174</accession>
+	<accession_version>VCV002921174.</accession_version>
+	<title>NM_000527.5(LDLR):c.1201C&gt;T (p.Leu401Phe)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3081635</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000527.5(LDLR):c.1201C&gt;T (p.Leu401Phe)</variation_name>
+			<cdna_change>c.1201C&gt;T</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11113292</start>
+					<stop>11113292</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11113292</display_start>
+					<display_stop>11113292</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11223968</start>
+					<stop>11223968</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11223968</display_start>
+					<display_stop>11223968</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000019.10:11113291:C:T</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004563607</string>
+		</scv>
+		<rcv>
+			<string>RCV003740600</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely pathogenic</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C3661900</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>not provided</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LDLR</gene_sort>
+	<chr_sort>19</chr_sort>
+	<location_sort>00000000000011113292</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LDLR</symbol>
+			<GeneID>3949</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>missense variant</string>
+	</molecular_consequence_list>
+	<protein_change>L233F, L360F, L274F, L401F</protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2920487">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002920487</accession>
+	<accession_version>VCV002920487.</accession_version>
+	<title>NM_015627.3(LDLRAP1):c.748-20C&gt;T</title>
+	<variation_set>
+		<variation>
+			<measure_id>3077926</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_015627.3(LDLRAP1):c.748-20C&gt;T</variation_name>
+			<cdna_change>NM_015627.3(LDLRAP1):c.748-20C&gt;T</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>1</chr>
+					<band>1p36.11</band>
+					<start>25565153</start>
+					<stop>25565153</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>25565153</display_start>
+					<display_stop>25565153</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>1</chr>
+					<band>1p36.11</band>
+					<start>25891644</start>
+					<stop>25891644</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>25891644</display_start>
+					<display_stop>25891644</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000001.11:25565152:C:T</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004557096</string>
+		</scv>
+		<rcv>
+			<string>RCV003613024</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>Orphanet</db_source>
+						<db_id>391665</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C1863512</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MONDO</db_source>
+						<db_id>MONDO:0011374</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>OMIM</db_source>
+						<db_id>603813</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>Hypercholesterolemia, familial, 4</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LDLRAP1</gene_sort>
+	<chr_sort>01</chr_sort>
+	<location_sort>00000000000025565153</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LDLRAP1</symbol>
+			<GeneID>26119</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>intron variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2920263">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002920263</accession>
+	<accession_version>VCV002920263.</accession_version>
+	<title>NM_015627.3(LDLRAP1):c.459+19G&gt;A</title>
+	<variation_set>
+		<variation>
+			<measure_id>3081067</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_015627.3(LDLRAP1):c.459+19G&gt;A</variation_name>
+			<cdna_change>NM_015627.3(LDLRAP1):c.459+19G&gt;A</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>1</chr>
+					<band>1p36.11</band>
+					<start>25557286</start>
+					<stop>25557286</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>25557286</display_start>
+					<display_stop>25557286</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>1</chr>
+					<band>1p36.11</band>
+					<start>25883777</start>
+					<stop>25883777</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>25883777</display_start>
+					<display_stop>25883777</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000001.11:25557285:G:A</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004556824</string>
+		</scv>
+		<rcv>
+			<string>RCV003613016</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>Orphanet</db_source>
+						<db_id>391665</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C1863512</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MONDO</db_source>
+						<db_id>MONDO:0011374</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>OMIM</db_source>
+						<db_id>603813</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>Hypercholesterolemia, familial, 4</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LDLRAP1</gene_sort>
+	<chr_sort>01</chr_sort>
+	<location_sort>00000000000025557286</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LDLRAP1</symbol>
+			<GeneID>26119</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>intron variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2920066">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002920066</accession>
+	<accession_version>VCV002920066.</accession_version>
+	<title>NM_000527.5(LDLR):c.2140+15T&gt;C</title>
+	<variation_set>
+		<variation>
+			<measure_id>3080870</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000527.5(LDLR):c.2140+15T&gt;C</variation_name>
+			<cdna_change>NM_000527.5(LDLR):c.2140+15T&gt;C</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11120537</start>
+					<stop>11120537</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11120537</display_start>
+					<display_stop>11120537</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11231213</start>
+					<stop>11231213</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11231213</display_start>
+					<display_stop>11231213</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000019.10:11120536:T:C</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004560796</string>
+		</scv>
+		<rcv>
+			<string>RCV003741120</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C0020445</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MONDO</db_source>
+						<db_id>MONDO:0005439</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>OMIM</db_source>
+						<db_id>PS143890</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>Familial hypercholesterolemia</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LDLR</gene_sort>
+	<chr_sort>19</chr_sort>
+	<location_sort>00000000000011120537</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LDLR</symbol>
+			<GeneID>3949</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>intron variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2919647">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002919647</accession>
+	<accession_version>VCV002919647.</accession_version>
+	<title>NM_015627.3(LDLRAP1):c.89-13T&gt;C</title>
+	<variation_set>
+		<variation>
+			<measure_id>3072528</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_015627.3(LDLRAP1):c.89-13T&gt;C</variation_name>
+			<cdna_change>NM_015627.3(LDLRAP1):c.89-13T&gt;C</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>1</chr>
+					<band>1p36.11</band>
+					<start>25553909</start>
+					<stop>25553909</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>25553909</display_start>
+					<display_stop>25553909</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>1</chr>
+					<band>1p36.11</band>
+					<start>25880400</start>
+					<stop>25880400</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>25880400</display_start>
+					<display_stop>25880400</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000001.11:25553908:T:C</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004561832</string>
+		</scv>
+		<rcv>
+			<string>RCV003613001</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>Orphanet</db_source>
+						<db_id>391665</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C1863512</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MONDO</db_source>
+						<db_id>MONDO:0011374</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>OMIM</db_source>
+						<db_id>603813</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>Hypercholesterolemia, familial, 4</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LDLRAP1</gene_sort>
+	<chr_sort>01</chr_sort>
+	<location_sort>00000000000025553909</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LDLRAP1</symbol>
+			<GeneID>26119</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>intron variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2919631">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002919631</accession>
+	<accession_version>VCV002919631.</accession_version>
+	<title>NM_000527.5(LDLR):c.2386A&gt;G (p.Ile796Val)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3072513</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000527.5(LDLR):c.2386A&gt;G (p.Ile796Val)</variation_name>
+			<cdna_change>c.2386A&gt;G</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11128082</start>
+					<stop>11128082</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11128082</display_start>
+					<display_stop>11128082</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11238758</start>
+					<stop>11238758</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11238758</display_start>
+					<display_stop>11238758</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000019.10:11128081:A:G</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004561814</string>
+		</scv>
+		<rcv>
+			<string>RCV003741114</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Uncertain significance</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C0020445</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MONDO</db_source>
+						<db_id>MONDO:0005439</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>OMIM</db_source>
+						<db_id>PS143890</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>Familial hypercholesterolemia</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LDLR</gene_sort>
+	<chr_sort>19</chr_sort>
+	<location_sort>00000000000011128082</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LDLR</symbol>
+			<GeneID>3949</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>missense variant</string>
+	</molecular_consequence_list>
+	<protein_change>I628V, I796V, I618V, I755V</protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2918484">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002918484</accession>
+	<accession_version>VCV002918484.</accession_version>
+	<title>NM_000527.5(LDLR):c.935A&gt;G (p.Glu312Gly)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3080603</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000527.5(LDLR):c.935A&gt;G (p.Glu312Gly)</variation_name>
+			<cdna_change>c.935A&gt;G</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11218185</start>
+					<stop>11218185</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11218185</display_start>
+					<display_stop>11218185</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11107509</start>
+					<stop>11107509</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11107509</display_start>
+					<display_stop>11107509</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000019.10:11107508:A:G</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004553709</string>
+		</scv>
+		<rcv>
+			<string>RCV003741092</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Uncertain significance</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C0020445</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MONDO</db_source>
+						<db_id>MONDO:0005439</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>OMIM</db_source>
+						<db_id>PS143890</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>Familial hypercholesterolemia</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LDLR</gene_sort>
+	<chr_sort>19</chr_sort>
+	<location_sort>00000000000011107509</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LDLR</symbol>
+			<GeneID>3949</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>missense variant</string>
+	</molecular_consequence_list>
+	<protein_change>E312G, E144G, E185G, E271G</protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2917393">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002917393</accession>
+	<accession_version>VCV002917393.</accession_version>
+	<title>NM_000527.5(LDLR):c.1586+19G&gt;A</title>
+	<variation_set>
+		<variation>
+			<measure_id>3074635</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000527.5(LDLR):c.1586+19G&gt;A</variation_name>
+			<cdna_change>NM_000527.5(LDLR):c.1586+19G&gt;A</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11113781</start>
+					<stop>11113781</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11113781</display_start>
+					<display_stop>11113781</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11224457</start>
+					<stop>11224457</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11224457</display_start>
+					<display_stop>11224457</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000019.10:11113780:G:A</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004552743</string>
+		</scv>
+		<rcv>
+			<string>RCV003741068</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C0020445</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MONDO</db_source>
+						<db_id>MONDO:0005439</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>OMIM</db_source>
+						<db_id>PS143890</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>Familial hypercholesterolemia</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LDLR</gene_sort>
+	<chr_sort>19</chr_sort>
+	<location_sort>00000000000011113781</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LDLR</symbol>
+			<GeneID>3949</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>intron variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2917212">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002917212</accession>
+	<accession_version>VCV002917212.</accession_version>
+	<title>NM_000527.5(LDLR):c.2334A&gt;G (p.Arg778=)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3077274</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000527.5(LDLR):c.2334A&gt;G (p.Arg778=)</variation_name>
+			<cdna_change>c.2334A&gt;G</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11128030</start>
+					<stop>11128030</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11128030</display_start>
+					<display_stop>11128030</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11238706</start>
+					<stop>11238706</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11238706</display_start>
+					<display_stop>11238706</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000019.10:11128029:A:G</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004553447</string>
+		</scv>
+		<rcv>
+			<string>RCV003741065</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Likely benign</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C0020445</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MONDO</db_source>
+						<db_id>MONDO:0005439</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>OMIM</db_source>
+						<db_id>PS143890</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>Familial hypercholesterolemia</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LDLR</gene_sort>
+	<chr_sort>19</chr_sort>
+	<location_sort>00000000000011128030</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LDLR</symbol>
+			<GeneID>3949</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>synonymous variant</string>
+	</molecular_consequence_list>
+	<protein_change></protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+<DocumentSummary uid="2917087">
+	<obj_type>single nucleotide variant</obj_type>
+	<accession>VCV002917087</accession>
+	<accession_version>VCV002917087.</accession_version>
+	<title>NM_000527.5(LDLR):c.2557G&gt;C (p.Val853Leu)</title>
+	<variation_set>
+		<variation>
+			<measure_id>3077149</measure_id>
+			<variation_xrefs>
+			</variation_xrefs>
+			<variation_name>NM_000527.5(LDLR):c.2557G&gt;C (p.Val853Leu)</variation_name>
+			<cdna_change>c.2557G&gt;C</cdna_change>
+			<aliases>
+			</aliases>
+			<variation_loc>
+				<assembly_set>
+					<status>previous</status>
+					<assembly_name>GRCh37</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11241966</start>
+					<stop>11241966</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11241966</display_start>
+					<display_stop>11241966</display_stop>
+					<assembly_acc_ver>GCF_000001405.25</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+				<assembly_set>
+					<status>current</status>
+					<assembly_name>GRCh38</assembly_name>
+					<chr>19</chr>
+					<band>19p13.2</band>
+					<start>11131290</start>
+					<stop>11131290</stop>
+					<inner_start></inner_start>
+					<inner_stop></inner_stop>
+					<outer_start></outer_start>
+					<outer_stop></outer_stop>
+					<display_start>11131290</display_start>
+					<display_stop>11131290</display_stop>
+					<assembly_acc_ver>GCF_000001405.38</assembly_acc_ver>
+					<annotation_release></annotation_release>
+					<alt></alt>
+					<ref></ref>
+				</assembly_set>
+			</variation_loc>
+			<allele_freq_set>
+			</allele_freq_set>
+			<variant_type>single nucleotide variant</variant_type>
+			<canonical_spdi>NC_000019.10:11131289:G:C</canonical_spdi>
+		</variation>
+	</variation_set>
+	<supporting_submissions>
+		<scv>
+			<string>SCV004553297</string>
+		</scv>
+		<rcv>
+			<string>RCV003741063</string>
+		</rcv>
+	</supporting_submissions>
+	<germline_classification>
+		<description>Uncertain significance</description>
+		<last_evaluated>2023/01/01 00:00</last_evaluated>
+		<review_status>criteria provided, single submitter</review_status>
+		<trait_set>
+			<trait>
+				<trait_xrefs>
+					<trait_xref>
+						<db_source>MedGen</db_source>
+						<db_id>C0020445</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>MONDO</db_source>
+						<db_id>MONDO:0005439</db_id>
+					</trait_xref>
+					<trait_xref>
+						<db_source>OMIM</db_source>
+						<db_id>PS143890</db_id>
+					</trait_xref>
+				</trait_xrefs>
+				<trait_name>Familial hypercholesterolemia</trait_name>
+			</trait>
+		</trait_set>
+	</germline_classification>
+	<clinical_impact_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</clinical_impact_classification>
+	<oncogenicity_classification>
+		<description></description>
+		<last_evaluated>1/01/01 00:00</last_evaluated>
+		<review_status></review_status>
+		<trait_set>
+		</trait_set>
+	</oncogenicity_classification>
+	<record_status></record_status>
+	<gene_sort>LDLR</gene_sort>
+	<chr_sort>19</chr_sort>
+	<location_sort>00000000000011131290</location_sort>
+	<variation_set_name></variation_set_name>
+	<variation_set_id></variation_set_id>
+	<genes>
+		<gene>
+			<symbol>LDLR</symbol>
+			<GeneID>3949</GeneID>
+			<strand>+</strand>
+			<source>submitted</source>
+		</gene>
+	</genes>
+	<molecular_consequence_list>
+		<string>missense variant</string>
+	</molecular_consequence_list>
+	<protein_change>V851L, V675L, V812L, V685L, V853L</protein_change>
+	<fda_recognized_database></fda_recognized_database>
+</DocumentSummary>
+
+</DocumentSummarySet>
+</eSummaryResult>
