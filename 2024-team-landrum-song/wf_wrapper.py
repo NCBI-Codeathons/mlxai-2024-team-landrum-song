@@ -5,10 +5,11 @@ TODO
 """
 
 import argparse
+import functools
 from pathlib import Path
 from typing import Tuple
 
-from flytekit import task, workflow
+from flytekit import task, workflow, map_task
 from rich import print as rprint
 
 
@@ -109,21 +110,27 @@ def main() -> None:
     genelist, email = parse_command_line_args()
 
     # run the raw data retrieval tasks
-    retrieved_datasets = [retrieve_data(gene, email) for gene in genelist]
+    retrieval_partial = functools.partial(retrieve_data, email=email)
+    retrieval_result = map_task(retrieval_partial)(query_gene=genelist)
 
     # extract unique sets of conditions for each gene dataset
-    condition_sets = [extract_condition_set() for dataset in retrieved_datasets]
+    # condition_sets = map_task(extract_condition_set)()
+    condition_sets = [extract_condition_set() for dataset in retrieval_result]
 
     # send in the prompts
+    # llm_responses = map_task(prompt_llm)(condition_sets)
     llm_responses = [prompt_llm() for diseases in condition_sets]
 
     # parse responses into JSON formats
+    # sorted_conditions = map_task(parse_response)(llm_responses)
     sorted_conditions = [parse_response() for response in llm_responses]
 
     # remap the new top-level disease names onto the original clinvar data
+    # final_mappings = map_task(map_back_to_clinvar)(sorted_conditions)
     final_mappings = [map_back_to_clinvar() for cond in sorted_conditions]
 
     # write out results for manual review
+    # _ = map_task(write_out_results)(final_mappings)
     _ = [write_out_results() for mapping in final_mappings]
 
 
