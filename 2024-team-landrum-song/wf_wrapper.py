@@ -8,6 +8,7 @@ import argparse
 import functools
 from pathlib import Path
 from typing import Tuple
+# from .clinvar_unfiltered_disease_name import search_and_save_gene_info_combined
 
 from flytekit import task, workflow, map_task
 from rich import print as rprint
@@ -134,5 +135,5 @@ def main() -> None:
     _ = [write_out_results() for mapping in final_mappings]
 
 
-if __name__ == "__main__.py":
+if __name__ == "__main__":
     main()
