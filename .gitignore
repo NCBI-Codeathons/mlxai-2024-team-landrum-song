@@ -85,6 +85,8 @@ scratch/
 # outputs
 *.xlsx
 *.arrow
+*.xml
+*.json
 
 # MacOS files
 .DS_Store

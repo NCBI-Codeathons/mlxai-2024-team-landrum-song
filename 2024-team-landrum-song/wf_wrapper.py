@@ -8,10 +8,11 @@ import argparse
 import functools
 from pathlib import Path
 from typing import Tuple
-# from .pull_and_extract_clinvar import pull_clinvar_xml
 
-from flytekit import task, workflow, map_task
+from flytekit import map_task, task, workflow
 from rich import print as rprint
+
+from .pull_and_extract_clinvar import pull_clinvar_xml
 
 
 def parse_command_line_args() -> Tuple[Path, str]:
@@ -48,7 +49,7 @@ def retrieve_data(query_gene: str, _email: str) -> None:
     rprint(f"retrieving ClinVar data for {query_gene}")
 
     # call wrapper function from entrez-xml script
-    # parsed_xml = search_and_save_gene_info_combined(query_gene, email)
+    _parsed_xml = pull_clinvar_xml(query_gene, _email, False)
 
 
 @task
@@ -108,11 +109,15 @@ def main() -> None:
 
     # parse command line arguments that supply a file listing genes of interest
     # and an email for NCBI tracking purposes
-    genelist, email = parse_command_line_args()
+    gene_file, email = parse_command_line_args()
+
+    # collect the list of genes
+    with open(gene_file, "r", encoding="utf8") as input_handle:
+        genes = [gene.strip() for gene in input_handle]
 
     # run the raw data retrieval tasks
     retrieval_partial = functools.partial(retrieve_data, email=email)
-    retrieval_result = map_task(retrieval_partial)(query_gene=genelist)
+    retrieval_result = map_task(retrieval_partial)(query_gene=genes)
 
     # extract unique sets of conditions for each gene dataset
     # condition_sets = map_task(extract_condition_set)()
