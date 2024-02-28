@@ -12,7 +12,7 @@ from typing import Dict, List, Tuple
 from flytekit import map_task, task, workflow
 from rich import print as rprint
 
-from .pull_and_extract_clinvar import extract_variant_data, pull_clinvar_xml
+from .pull_and_extract_clinvar import pull_and_extract_data
 
 
 def parse_command_line_args() -> Tuple[Path, str]:
@@ -48,11 +48,9 @@ def retrieve_data(query_gene: str, _email: str) -> List[Dict]:
     """
     rprint(f"retrieving ClinVar data for {query_gene}")
 
-    # call wrapper function from entrez-xml script
-    parsed_xml = pull_clinvar_xml(query_gene, _email, False)
-
+    # call wrapper function from entrez-xml script, and
     # extract the relevant data as a list of dictionaries
-    extracted_data = extract_variant_data(parsed_xml)
+    extracted_data = pull_and_extract_data(query_gene, _email)
 
     return extracted_data
 
