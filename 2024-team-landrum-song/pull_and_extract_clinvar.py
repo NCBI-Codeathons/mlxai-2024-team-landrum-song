@@ -24,7 +24,7 @@ import json
 import os
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from typing import List, Tuple
+from typing import Dict, List, Tuple
 from xml.etree.ElementTree import Element, ElementTree, SubElement
 
 from Bio import Entrez
@@ -92,7 +92,7 @@ async def pull_clinvar_xml(gene: str, email: str, only_first: bool) -> str:
     return root
 
 
-async def extract_variant_data(root) -> List:
+async def extract_variant_data(root) -> List[Dict]:
     """
     Extract RCV IDs, MedGen IDs, and other metadata for each variant and
     return that information as a list of dictionaries.
@@ -199,7 +199,9 @@ async def main() -> None:
 
     # Example usage parameters
     gene_file, email = parse_command_line_args()
-    only_first = False  # To only search one gene and the first ID for testing set only_first to True
+
+    # To only search one gene and the first ID for testing set only_first to True
+    only_first = False
 
     # collect the list of genes
     with open(gene_file, "r", encoding="utf8") as input_handle:
