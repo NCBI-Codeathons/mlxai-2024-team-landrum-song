@@ -1,4 +1,4 @@
-# Aggregation of disease terms in ClinVar
+# ClinCluster: a Package for Aggregating Disease Terms in ClinVar
 
 List of participants and affiliations:
 - Melissa Landrum, NIH/NCBI (Co-Team Leader)
