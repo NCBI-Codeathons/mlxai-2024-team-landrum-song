@@ -7,12 +7,12 @@ TODO
 import argparse
 import functools
 from pathlib import Path
-from typing import Tuple
+from typing import Dict, List, Tuple
 
 from flytekit import map_task, task, workflow
 from rich import print as rprint
 
-from .pull_and_extract_clinvar import pull_clinvar_xml
+from .pull_and_extract_clinvar import extract_variant_data, pull_clinvar_xml
 
 
 def parse_command_line_args() -> Tuple[Path, str]:
@@ -40,7 +40,7 @@ def parse_command_line_args() -> Tuple[Path, str]:
 
 
 @task
-def retrieve_data(query_gene: str, _email: str) -> None:
+def retrieve_data(query_gene: str, _email: str) -> List[Dict]:
     """
     Use the entrez Python API to retrieve data from NCBI ClinVar
     for a given gene. This is the chief source of network I/O in
@@ -49,7 +49,12 @@ def retrieve_data(query_gene: str, _email: str) -> None:
     rprint(f"retrieving ClinVar data for {query_gene}")
 
     # call wrapper function from entrez-xml script
-    _parsed_xml = pull_clinvar_xml(query_gene, _email, False)
+    parsed_xml = pull_clinvar_xml(query_gene, _email, False)
+
+    # extract the relevant data as a list of dictionaries
+    extracted_data = extract_variant_data(parsed_xml)
+
+    return extracted_data
 
 
 @task
