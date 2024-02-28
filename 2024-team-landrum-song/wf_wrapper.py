@@ -7,7 +7,7 @@ TODO
 import argparse
 import functools
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Set, Tuple
 
 from flytekit import map_task, task, workflow
 from rich import print as rprint
@@ -56,12 +56,16 @@ def retrieve_data(query_gene: str, _email: str) -> List[Dict]:
 
 
 @task
-def extract_condition_set() -> None:
+def extract_condition_set(data: List[Dict]) -> Set[str]:
     """
     Parse the raw XML output from Entrez into a set of unique condition
     names whose structure may be variously nested.
     """
     rprint("Extracting set of conditions from the ClinVar query.")
+
+    condition_set = set(record.get("condition").get("text") for record in data)
+
+    return condition_set
 
 
 @task
@@ -123,12 +127,10 @@ def main() -> None:
     retrieval_result = map_task(retrieval_partial)(query_gene=genes)
 
     # extract unique sets of conditions for each gene dataset
-    # condition_sets = map_task(extract_condition_set)()
-    condition_sets = [extract_condition_set() for dataset in retrieval_result]
+    condition_sets = map_task(extract_condition_set)(retrieval_result)
 
     # send in the prompts
-    # llm_responses = map_task(prompt_llm)(condition_sets)
-    llm_responses = [prompt_llm() for diseases in condition_sets]
+    llm_responses = map_task(prompt_llm)(condition_sets)
 
     # parse responses into JSON formats
     # sorted_conditions = map_task(parse_response)(llm_responses)
