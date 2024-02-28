@@ -7,12 +7,13 @@ TODO
 import argparse
 import functools
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Set, Tuple
 
 from flytekit import map_task, task, workflow
 from rich import print as rprint
 
-from .pull_and_extract_clinvar import extract_variant_data, pull_clinvar_xml
+from .pull_and_extract_clinvar import pull_and_extract_data
+# from .llm_cluster import register_commands
 
 
 def parse_command_line_args() -> Tuple[Path, str]:
@@ -34,6 +35,14 @@ def parse_command_line_args() -> Tuple[Path, str]:
         required=True,
         help="Email for NCBI ClinVar tracking purposes.",
     )
+    parser.add_argument(
+        "--tuning-param",
+        "-t",
+        type=float,
+        required=False,
+        default=1.2,
+        help="Email for NCBI ClinVar tracking purposes.",
+    )
     args = parser.parse_args()
 
     return args.genelist, args.email
@@ -48,22 +57,24 @@ def retrieve_data(query_gene: str, _email: str) -> List[Dict]:
     """
     rprint(f"retrieving ClinVar data for {query_gene}")
 
-    # call wrapper function from entrez-xml script
-    parsed_xml = pull_clinvar_xml(query_gene, _email, False)
-
+    # call wrapper function from entrez-xml script, and
     # extract the relevant data as a list of dictionaries
-    extracted_data = extract_variant_data(parsed_xml)
+    extracted_data = pull_and_extract_data(query_gene, _email)
 
     return extracted_data
 
 
 @task
-def extract_condition_set() -> None:
+def extract_condition_set(data: List[Dict]) -> Set[str]:
     """
     Parse the raw XML output from Entrez into a set of unique condition
     names whose structure may be variously nested.
     """
     rprint("Extracting set of conditions from the ClinVar query.")
+
+    condition_set = set(record.get("condition").get("text") for record in data)
+
+    return condition_set
 
 
 @task
@@ -83,6 +94,12 @@ def prompt_llm() -> None:
     """
 
     _llm_prompt = f"{prompt_template}\n\n{condition_set}"
+
+    # # command 1
+    # llm embed-multi diseases  test2.json  --database tmp.db  --model  sentence-transformers/all-MiniLM-L6-v2 --store
+
+    # # command 2
+    # llm cluster diseases --database tmp.db 1
 
 
 @task
@@ -125,12 +142,10 @@ def main() -> None:
     retrieval_result = map_task(retrieval_partial)(query_gene=genes)
 
     # extract unique sets of conditions for each gene dataset
-    # condition_sets = map_task(extract_condition_set)()
-    condition_sets = [extract_condition_set() for dataset in retrieval_result]
+    condition_sets = map_task(extract_condition_set)(retrieval_result)
 
     # send in the prompts
-    # llm_responses = map_task(prompt_llm)(condition_sets)
-    llm_responses = [prompt_llm() for diseases in condition_sets]
+    llm_responses = map_task(prompt_llm)(condition_sets)
 
     # parse responses into JSON formats
     # sorted_conditions = map_task(parse_response)(llm_responses)

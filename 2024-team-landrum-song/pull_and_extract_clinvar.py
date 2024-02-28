@@ -22,7 +22,7 @@ import argparse
 import asyncio
 import json
 import os
-import http
+import urllib
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -57,15 +57,31 @@ def parse_command_line_args() -> Tuple[Path, str]:
     return args.genelist, args.email
 
 
-async def pull_and_extract_clinvar_data(gene: str, email: str) -> List[Dict]:
+async def pull_clinvar_data(
+    db: str, id_list: List[str], fetched_records: int, retmax: int
+):
+    """
+    TODO
+    """
+    return Entrez.efetch(
+        db=db,
+        id=id_list,
+        rettype="vcv",
+        retstart=fetched_records,
+        retmax=retmax,
+        from_esearch="true",
+    )
+
+
+async def pull_and_extract_data(gene: str, email: str) -> List[Dict]:
     """
     Download the complete ClinVar XML dataset for the gene of interest.
     """
     Entrez.email = email
-    db = "clinvar"
+    ncbi_db = "clinvar"
 
     # Search for the gene in ClinVar
-    search_handle = Entrez.esearch(db=db, term=gene + "[Gene Name]", retmax=10000)
+    search_handle = Entrez.esearch(db=ncbi_db, term=gene + "[Gene Name]", retmax=10000)
     search_results = Entrez.read(search_handle)
     search_handle.close()
 
@@ -83,17 +99,12 @@ async def pull_and_extract_clinvar_data(gene: str, email: str) -> List[Dict]:
     data = []  # Initialize a list to store fetched data
 
     while fetched_records < total_records:
-        fetch_handle = Entrez.efetch(
-            db=db,
-            id=id_list,
-            rettype="vcv",
-            retstart=fetched_records,
-            retmax=retmax,
-            from_esearch="true",
+        fetch_handle = await pull_clinvar_data(
+            ncbi_db, id_list, fetched_records, retmax
         )
         try:
             xml_data = fetch_handle.read()
-        except http.client.IncompleteRead as e:
+        except urllib.error.HTTPError as e:
             xml_data = (
                 e.partial
             )  # Use partial data if an IncompleteRead exception occurs
@@ -189,7 +200,7 @@ async def main() -> None:
 
     # process each gene asynchronously
     for gene in genes:
-        extracted_data = await pull_and_extract_clinvar_data(gene, email)
+        extracted_data = await pull_and_extract_data(gene, email)
         await save_variant_xml(gene, extracted_data)
         await save_variant_json(gene, extracted_data)
         rprint(f"Data retrieval, extraction, and writing complete for {gene}")
