@@ -1,23 +1,64 @@
 #!/usr/bin/env python3
 
 """
-This script outputs diseases related to genetic variations of LDLR
+This script interfaces with NCBI ClinVar via the Entrez functionality included
+in Biopython to download XML-formatted variant data, extract information about
+the condition(s) associated with each variant, and optionally save that
+information as a JSON and/or a simplified XML.
+
+```
+usage: pull_and_extract_clinvar.py [-h] --genelist GENELIST --email EMAIL
+
+options:
+  -h, --help            show this help message and exit
+  --genelist GENELIST, -g GENELIST
+                        Text file with one, headerless column of one gene name per line.
+  --email EMAIL, -e EMAIL
+                        Email for NCBI ClinVar tracking purposes.
+```
 """
 
+import argparse
 import asyncio
 import json
 import os
 import xml.etree.ElementTree as ET
+from pathlib import Path
+from typing import List, Tuple
 from xml.etree.ElementTree import Element, ElementTree, SubElement
 
 from Bio import Entrez
 from rich import print as rprint
-from Typing import List
+
+
+def parse_command_line_args() -> Tuple[Path, str]:
+    """
+    Parse command line arguments, returning a file that lists genes of
+    interest and an email for NCBI tracking purposes.
+    """
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--genelist",
+        "-g",
+        type=Path,
+        required=True,
+        help="Text file with one, headerless column of one gene name per line.",
+    )
+    parser.add_argument(
+        "--email",
+        "-e",
+        type=str,
+        required=True,
+        help="Email for NCBI ClinVar tracking purposes.",
+    )
+    args = parser.parse_args()
+
+    return args.genelist, args.email
 
 
 async def pull_clinvar_xml(gene: str, email: str, only_first: bool) -> str:
     """
-    TODO
+    Download the complete ClinVar XML dataset for the gene of interest.
     """
     Entrez.email = email
     ncbi_db = "clinvar"
@@ -53,7 +94,8 @@ async def pull_clinvar_xml(gene: str, email: str, only_first: bool) -> str:
 
 async def extract_variant_data(root) -> List:
     """
-    TODO
+    Extract RCV IDs, MedGen IDs, and other metadata for each variant and
+    return that information as a list of dictionaries.
     """
 
     data = []
@@ -91,7 +133,7 @@ async def extract_variant_data(root) -> List:
 
 async def save_variant_xml(gene: str, data: List) -> None:
     """
-    TODO
+    Save the extracted variant XML data for the purposes of this codeathon.
     """
     # Save to XMLof the variant id, condition
     xml_filename = gene + "_variants_extracted.xml"
@@ -118,7 +160,8 @@ async def save_variant_xml(gene: str, data: List) -> None:
 
 async def save_full_xml(gene: str, xml_data) -> None:
     """
-    TODO
+    Save the raw XML data as an XML file for future usage for other
+    purposes.
     """
 
     # Define the filename and remove if it exists
@@ -138,7 +181,7 @@ async def save_full_xml(gene: str, xml_data) -> None:
 
 async def save_variant_json(gene: str, data) -> None:
     """
-    TODO
+    Save the extracted variant data in JSON format for the purposes of this codeathon.
     """
     # Save the data to a JSON file
     json_filename = gene + "_variants_extracted.json"
@@ -149,14 +192,20 @@ async def save_variant_json(gene: str, data) -> None:
 
 async def main() -> None:
     """
-    TODO
+    Coordinate the flow of data through the above functions within an
+    asynchronous runtime that separates network/IO-bound tasks from
+    CPU-bound tasks.
     """
 
     # Example usage parameters
-    genes = ["LDLR", "251590"]  # ["LDLR", "KCNQ1", "USH2A", "SCN5A", "TSC1", "251590"]
-    email = "wengang.zhang@nih.gov"
+    gene_file, email = parse_command_line_args()
     only_first = False  # To only search one gene and the first ID for testing set only_first to True
 
+    # collect the list of genes
+    with open(gene_file, "r", encoding="utf8") as input_handle:
+        genes = [gene.strip() for gene in input_handle]
+
+    # process each gene asynchronously
     for gene in genes:
         xml_data = await pull_clinvar_xml(gene, email, only_first=only_first)
         extracted_data = await extract_variant_data(xml_data)
