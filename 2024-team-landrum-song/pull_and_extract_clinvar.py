@@ -22,10 +22,11 @@ import argparse
 import asyncio
 import json
 import os
+import http
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Dict, List, Tuple
-from xml.etree.ElementTree import Element, ElementTree, SubElement
+from xml.etree.ElementTree import ElementTree
 
 from Bio import Entrez
 from rich import print as rprint
@@ -56,81 +57,79 @@ def parse_command_line_args() -> Tuple[Path, str]:
     return args.genelist, args.email
 
 
-async def pull_clinvar_xml(gene: str, email: str, only_first: bool) -> str:
+async def pull_and_extract_clinvar_data(gene: str, email: str) -> List[Dict]:
     """
     Download the complete ClinVar XML dataset for the gene of interest.
     """
     Entrez.email = email
-    ncbi_db = "clinvar"
+    db = "clinvar"
 
     # Search for the gene in ClinVar
-    search_handle = Entrez.esearch(db=ncbi_db, term=gene, retmax=10000)
+    search_handle = Entrez.esearch(db=db, term=gene + "[Gene Name]", retmax=10000)
     search_results = Entrez.read(search_handle)
     search_handle.close()
 
     ids = search_results["IdList"]
 
-    rprint(f"Number of IDs found for {gene}: {len(ids)}")
-
-    if only_first and ids:
-        ids = ids[:1]  # Limit to the first ID
-
     # Fetch the ClinVar record for each ID
     id_list = ",".join(ids)
-    fetch_handle = Entrez.esummary(
-        db=ncbi_db, id=id_list, rettype="vcv", from_esearch="true"
-    )
-    xml_data = fetch_handle.read()
-    fetch_handle.close()
 
-    # write out raw xml_data
-    await save_full_xml(gene, xml_data)
+    total_records = len(ids)
+    rprint(f"Total records found for {gene}: {total_records}")
 
-    # Load and parse the XML file
-    root = ET.fromstring(xml_data)
+    retmax = 1000  # Number of records to fetch per request
+    fetched_records = 0
 
-    return root
+    data = []  # Initialize a list to store fetched data
 
+    while fetched_records < total_records:
+        fetch_handle = Entrez.efetch(
+            db=db,
+            id=id_list,
+            rettype="vcv",
+            retstart=fetched_records,
+            retmax=retmax,
+            from_esearch="true",
+        )
+        try:
+            xml_data = fetch_handle.read()
+        except http.client.IncompleteRead as e:
+            xml_data = (
+                e.partial
+            )  # Use partial data if an IncompleteRead exception occurs
+        finally:
+            fetch_handle.close()
 
-async def extract_variant_data(gene: str, root) -> List[Dict]:
-    """
-    Extract RCV IDs, MedGen IDs, and other metadata for each variant and
-    return that information as a list of dictionaries.
-    """
+        # Process the XML data
+        root = ET.fromstring(xml_data)
+        # Extract and process the relevant information from `root` as per your existing logic
+        # Extract relevant information
+        for variant in root.findall(".//VariationArchive"):
+            variant_id = variant.get("VariationID") or "Unknown"
+            for rcv_accession in variant.findall(".//RCVAccession"):
+                rcv_id = rcv_accession.get("Accession") or "Unknown"
+                for classified_condition in rcv_accession.findall(
+                    ".//ClassifiedCondition"
+                ):
+                    condition_text = classified_condition.text or "Unknown"
+                    condition_db = classified_condition.get("DB") or "Unknown"
+                    condition_id = classified_condition.get("ID") or "Unknown"
+                    data.append(
+                        {
+                            "variant_id": variant_id,
+                            "RCV": rcv_id,
+                            "condition": {
+                                "db": condition_db,
+                                "id": condition_id,
+                                "text": condition_text,
+                            },
+                        }
+                    )
+        # Update fetched_records to reflect the number of records processed
+        fetched_records += retmax
 
-    data = []
-
-    # Extract relevant information
-    for doc_summary in root.findall(".//DocumentSummary"):
-        variant_id = doc_summary.get("uid")
-        rcv_ids = [rcv.text for rcv in doc_summary.findall(".//rcv/string")]
-        medgen_entries = [
-            (xref.find(".//db_source").text, xref.find(".//db_id").text)
-            for xref in doc_summary.findall(".//trait_xref")
-            if xref.find(".//db_source").text == "MedGen"
-        ]
-        trait_names = [name.text for name in doc_summary.findall(".//trait_name")]
-
-        # Assuming each RCV ID corresponds to a trait name and MedGen entry in order
-        for i, rcv_id in enumerate(rcv_ids):
-            medgen_db, medgen_id = (
-                medgen_entries[i] if i < len(medgen_entries) else ("Unknown", "Unknown")
-            )
-            trait_name = trait_names[i] if i < len(trait_names) else "Unknown"
-
-            # Construct a dictionary for each variant's information
-            variant_info = {
-                "variant_id": variant_id,
-                "RCV_id": rcv_id,
-                "MedGen": {"db": medgen_db, "id": medgen_id},
-                "trait_name": trait_name,
-            }
-
-            data.append(variant_info)
-
-    condition_set = set(entry.get("trait_name") for entry in data)
-
-    rprint(f"{len(condition_set)} unique condition names found for the gene {gene}.")
+    condition_set = set(record.get("condition").get("text") for record in data)
+    rprint(f"{len(condition_set)} unique conditions found for gene {gene}.")
 
     return data
 
@@ -139,54 +138,34 @@ async def save_variant_xml(gene: str, data: List) -> None:
     """
     Save the extracted variant XML data for the purposes of this codeathon.
     """
+
     # Save to XMLof the variant id, condition
     xml_filename = gene + "_variants_extracted.xml"
-    # Create the root element
-    new_root = Element("Variants")
 
-    # Iterate through each item in the data list and create XML structure
-    for item in data:
-        variant_el = SubElement(new_root, "Variant", id=item["variant_id"])
-        rcv_el = SubElement(variant_el, "RCV", id=item["RCV_id"])
-        _medgen_el = SubElement(
-            rcv_el, "MedGen", db=item["MedGen"]["db"], id=item["MedGen"]["id"]
-        )
-        trait_name_el = SubElement(rcv_el, "TraitName")
-        trait_name_el.text = item["trait_name"]
+    # Save to XML of the variant id, condition
+    xml_filename = gene + "_variants_extracted.xml"
+    root_el = ET.Element("Variants")
+    for variant in data:
+        variant_el = ET.SubElement(root_el, "Variant")
+        ET.SubElement(variant_el, "VariantID").text = variant["variant_id"]
+        ET.SubElement(variant_el, "RCV").text = variant["RCV"]
+        condition_el = ET.SubElement(variant_el, "ClassifiedCondition")
+        condition_el.set("DB", variant["condition"]["db"])
+        condition_el.set("ID", variant["condition"]["id"])
+        condition_el.text = variant["condition"]["text"]
 
     # Create an ElementTree object from the root element
-    tree = ElementTree(new_root)
+    tree = ElementTree(root_el)
     if os.path.exists(xml_filename):
         os.remove(xml_filename)
     tree.write(xml_filename, encoding="UTF-8", xml_declaration=True)
-    rprint(f"Saved variant information to {xml_filename}")
-
-
-async def save_full_xml(gene: str, xml_data) -> None:
-    """
-    Save the raw XML data as an XML file for future usage for other
-    purposes.
-    """
-
-    # Define the filename and remove if it exists
-    filename = f"{gene}.xml"
-    if os.path.exists(filename):
-        os.remove(filename)
-
-    # Save the XML data to a file, handling bytes-to-string conversion if necessary
-    with open(filename, "w", encoding="utf-8") as file:
-        if isinstance(xml_data, bytes):
-            new_xml_data = xml_data.decode("utf-8")
-            file.write(new_xml_data)
-        else:
-            file.write(xml_data)
-    rprint(f"Saved {filename}")
 
 
 async def save_variant_json(gene: str, data) -> None:
     """
     Save the extracted variant data in JSON format for the purposes of this codeathon.
     """
+
     # Save the data to a JSON file
     json_filename = gene + "_variants_extracted.json"
     with open(json_filename, "w", encoding="utf-8") as json_file:
@@ -204,17 +183,13 @@ async def main() -> None:
     # Example usage parameters
     gene_file, email = parse_command_line_args()
 
-    # To only search one gene and the first ID for testing set only_first to True
-    only_first = False
-
     # collect the list of genes
     with open(gene_file, "r", encoding="utf8") as input_handle:
         genes = [gene.strip() for gene in input_handle]
 
     # process each gene asynchronously
     for gene in genes:
-        xml_data = await pull_clinvar_xml(gene, email, only_first=only_first)
-        extracted_data = await extract_variant_data(gene, xml_data)
+        extracted_data = await pull_and_extract_clinvar_data(gene, email)
         await save_variant_xml(gene, extracted_data)
         await save_variant_json(gene, extracted_data)
         rprint(f"Data retrieval, extraction, and writing complete for {gene}")
