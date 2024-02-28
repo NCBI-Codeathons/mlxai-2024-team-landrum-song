@@ -13,6 +13,7 @@ from flytekit import map_task, task, workflow
 from rich import print as rprint
 
 from .pull_and_extract_clinvar import pull_and_extract_data
+# from .llm_cluster import register_commands
 
 
 def parse_command_line_args() -> Tuple[Path, str]:
@@ -32,6 +33,14 @@ def parse_command_line_args() -> Tuple[Path, str]:
         "-e",
         type=str,
         required=True,
+        help="Email for NCBI ClinVar tracking purposes.",
+    )
+    parser.add_argument(
+        "--tuning-param",
+        "-t",
+        type=float,
+        required=False,
+        default=1.2,
         help="Email for NCBI ClinVar tracking purposes.",
     )
     args = parser.parse_args()
@@ -85,6 +94,12 @@ def prompt_llm() -> None:
     """
 
     _llm_prompt = f"{prompt_template}\n\n{condition_set}"
+
+    # # command 1
+    # llm embed-multi diseases  test2.json  --database tmp.db  --model  sentence-transformers/all-MiniLM-L6-v2 --store
+
+    # # command 2
+    # llm cluster diseases --database tmp.db 1
 
 
 @task

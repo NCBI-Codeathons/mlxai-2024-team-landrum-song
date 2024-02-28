@@ -15,7 +15,7 @@ Short, concise title for this cluster of related documents.
 def register_commands(cli):
     @cli.command()
     @click.argument("collection")
-    @click.argument("n", type=int)
+    @click.argument("n", type=float)
     @click.option(
         "--truncate",
         type=int,
@@ -126,4 +126,3 @@ def register_commands(cli):
             click.echo("]")
         else:
             click.echo(json.dumps(output_clusters, indent=4))
-
