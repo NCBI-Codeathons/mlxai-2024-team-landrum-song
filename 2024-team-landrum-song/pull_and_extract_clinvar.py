@@ -92,7 +92,7 @@ async def pull_clinvar_xml(gene: str, email: str, only_first: bool) -> str:
     return root
 
 
-async def extract_variant_data(root) -> List[Dict]:
+async def extract_variant_data(gene: str, root) -> List[Dict]:
     """
     Extract RCV IDs, MedGen IDs, and other metadata for each variant and
     return that information as a list of dictionaries.
@@ -127,6 +127,10 @@ async def extract_variant_data(root) -> List[Dict]:
             }
 
             data.append(variant_info)
+
+    condition_set = set(entry.get("trait_name") for entry in data)
+
+    rprint(f"{len(condition_set)} unique condition names found for the gene {gene}.")
 
     return data
 
@@ -210,7 +214,7 @@ async def main() -> None:
     # process each gene asynchronously
     for gene in genes:
         xml_data = await pull_clinvar_xml(gene, email, only_first=only_first)
-        extracted_data = await extract_variant_data(xml_data)
+        extracted_data = await extract_variant_data(gene, xml_data)
         await save_variant_xml(gene, extracted_data)
         await save_variant_json(gene, extracted_data)
         rprint(f"Data retrieval, extraction, and writing complete for {gene}")
