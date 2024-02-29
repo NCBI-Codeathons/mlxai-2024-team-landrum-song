@@ -7,7 +7,7 @@ with open( gene + '_variants_extracted.json', 'r') as file:
     ldlr_test_data = json.load(file)
 
 # Load LDLR_clusters.json
-with open(gene + '_clusters.json', 'r') as file:
+with open(gene + '_clusters_curated.json', 'r') as file:
     ldlr_clusters_data = json.load(file)
 
 # Check the first few items of each to understand their structure
