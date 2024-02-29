@@ -15,6 +15,7 @@ rich = "^13.7.0"
 flytekit = "^1.10.7"
 lxml = "^5.1.0"
 llm = "^0.13.1"
+nextflow = "^23.10.1"
 
 
 [tool.poetry.group.dev.dependencies]

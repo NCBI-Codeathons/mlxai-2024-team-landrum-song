@@ -9,13 +9,13 @@ import argparse
 import functools
 import subprocess
 from pathlib import Path
-from typing import Dict, List, Set, Tuple
+from typing import Tuple
 
 from flytekit import map_task, task, workflow
 from flytekit.types.file import FlyteFile
 from rich.pretty import pprint as rprint
 
-from .pull_and_extract_clinvar import pull_and_extract_data, save_variant_json
+from .pull_and_extract_clinvar import pull_and_extract_data, save_unique_conditions
 from .check_duplicate import deduplicate_in_clusters
 
 
@@ -39,7 +39,7 @@ def parse_command_line_args() -> Tuple[Path, str]:
         help="Email for NCBI ClinVar tracking purposes.",
     )
     parser.add_argument(
-        "--tuning-param",
+        "--tuningparam",
         "-t",
         type=float,
         required=False,
@@ -48,10 +48,10 @@ def parse_command_line_args() -> Tuple[Path, str]:
     )
     args = parser.parse_args()
 
-    return args.genelist, args.email
+    return args.genelist, args.email, args.tuningparam
 
 
-@task
+@task(container_image="nrminor/ncbi-ml-ai:v0.0.1")
 def retrieve_data(query_gene: str, _email: str) -> Tuple[str, str]:
     """
     Use the entrez Python API to retrieve data from NCBI ClinVar
@@ -65,42 +65,33 @@ def retrieve_data(query_gene: str, _email: str) -> Tuple[str, str]:
     extracted_data = pull_and_extract_data(query_gene, _email)
 
     # write to a JSON
-    json_out = save_variant_json(query_gene, extracted_data)
+    json_out = save_unique_conditions(query_gene, extracted_data)
 
-    return query_gene, json_out
-
-
-@task
-def extract_condition_set(data: List[Dict]) -> Set[str]:
-    """
-    Parse the raw XML output from Entrez into a set of unique condition
-    names whose structure may be variously nested.
-    """
-    rprint("Extracting set of conditions from the ClinVar query.")
-
-    condition_set = set(record.get("condition").get("text") for record in data)
-
-    return condition_set
+    return query_gene, FlyteFile(path=json_out)
 
 
-@task
-def prompt_llm(_condition_set: Set[str]) -> FlyteFile:
+@task(container_image="nrminor/ncbi-ml-ai:v0.0.1")
+def cluster_with_llm(
+    inputs: Tuple[str, FlyteFile], tuningparam: float
+) -> Tuple[str, FlyteFile]:
     """
     Prompt a language model to perform Density-Based Spatial
     Clustering of Applications with Noise (DBSCAN) on the condition
     set for the current gene and extract cluster indices.
     """
 
-    cluster_json_path = "condition_clusters.json"
+    gene, condition_file = inputs
+
+    cluster_json_path = f"{gene}_clusters.json"
 
     # command 1
     command1 = (
         "llm",
         "embed-multi",
         "diseases",
-        "test2.json",
+        condition_file,
         "--database",
-        "tmp.db",
+        f"{gene}.db",
         "--model",
         "sentence-transformers/all-MiniLM-L6-v2",
         "--store",
@@ -108,7 +99,14 @@ def prompt_llm(_condition_set: Set[str]) -> FlyteFile:
     llm_embed_process = subprocess.Popen(command1, stdout=subprocess.PIPE)
 
     # command 2
-    command2 = ("llm", "cluster", "diseases", "--database", "tmp.db", "1")
+    command2 = (
+        "llm",
+        "cluster",
+        "diseases",
+        "--database",
+        f"{gene}.db",
+        f"{tuningparam}",
+    )
     llm_cluster_process = subprocess.Popen(command2, stdout=cluster_json_path)
 
     # Allow vcftools to receive a SIGPIPE if gzip exits
@@ -125,30 +123,33 @@ def prompt_llm(_condition_set: Set[str]) -> FlyteFile:
         rprint(f"Clustering stderr:\{cluster_stderr}")
         sys.exit(1)
 
-    return FlyteFile(path=cluster_json_path)
+    return gene, FlyteFile(path=cluster_json_path)
 
 
-@task
-def parse_and_dedup_response(_cluster_json: FlyteFile) -> None:
+@task(container_image="nrminor/ncbi-ml-ai:v0.0.1")
+def parse_and_dedup_response(inputs: Tuple[str, FlyteFile]) -> Tuple[str, FlyteFile]:
     """
     TODO
     """
+    gene, _cluster_json = inputs
 
-    deduplicate_in_clusters("test")
+    out_path = deduplicate_in_clusters(gene)
 
-
-@task
-def map_back_to_clinvar() -> None:
-    """
-    TODO
-    """
+    return gene, FlyteFile(path=out_path)
 
 
-@task
-def write_out_results() -> None:
-    """
-    TODO
-    """
+# @task
+# def map_back_to_clinvar() -> None:
+#     """
+#     TODO
+#     """
+
+
+# @task
+# def write_out_results() -> None:
+#     """
+#     TODO
+#     """
 
 
 @workflow
@@ -159,27 +160,26 @@ def main() -> None:
 
     # parse command line arguments that supply a file listing genes of interest
     # and an email for NCBI tracking purposes
-    gene_file, email = parse_command_line_args()
+    gene_file, email, tuningparam = parse_command_line_args()
 
     # collect the list of genes
     with open(gene_file, "r", encoding="utf8") as input_handle:
         genes = [gene.strip() for gene in input_handle]
+    rprint(genes)
 
     # run the raw data retrieval tasks
     retrieval_partial = functools.partial(retrieve_data, email=email)
     retrieval_result = map_task(retrieval_partial)(query_gene=genes)
 
-    # extract unique sets of conditions for each gene dataset
-    condition_sets = map_task(extract_condition_set)(retrieval_result)
-
-    # send in the prompts
-    llm_responses = map_task(prompt_llm)(condition_sets)
+    # # send in the prompts
+    cluster_partial = functools.partial(cluster_with_llm, tuningparam=tuningparam)
+    llm_responses = map_task(cluster_partial)(retrieval_result)
 
     # parse responses into JSON formats
-    sorted_conditions = map_task(parse_and_dedup_response)(llm_responses)
+    _clustered_conditions = map_task(parse_and_dedup_response)(llm_responses)
 
     # remap the new top-level disease names onto the original clinvar data
-    _final_mappings = map_task(map_back_to_clinvar)(sorted_conditions)
+    # _final_mappings = map_task(map_back_to_clinvar)(sorted_conditions)
 
     # write out results for manual review
     # _ = map_task(write_out_results)(final_mappings)
