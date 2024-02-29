@@ -69,7 +69,7 @@ def deduplicate_in_clusters(gene: str):
         "\nNumber of RCV records that can be potentially reduced: ",
         total_reduced_records,
     )
-    print("Total nmber of RCV records: ", len(ldlr_test_data))
+    print("Total number of RCV records: ", len(ldlr_test_data))
 
     print(
         "\nNumber of variants with groupable disease names: ",
