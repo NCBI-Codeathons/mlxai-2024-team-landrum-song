@@ -20,6 +20,7 @@ options:
 
 import argparse
 import asyncio
+import http
 import json
 import os
 import urllib
@@ -112,10 +113,12 @@ async def pull_and_extract_data(gene: str, email: str) -> List[Dict]:
         )
         try:
             xml_data = fetch_handle.read()
-        except urllib.error.HTTPError as e:
+        except http.client.IncompleteRead as incomplete:
             xml_data = (
-                e.partial
+                incomplete.partial
             )  # Use partial data if an IncompleteRead exception occurs
+        except urllib.error.HTTPError as _:
+            continue
         finally:
             fetch_handle.close()
 
