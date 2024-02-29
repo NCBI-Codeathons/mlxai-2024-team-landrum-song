@@ -53,15 +53,11 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 ## Common Acronyms
 Abbreviation  | Acronym
 ------------- | -------------
-ACMG  | Content Cell
-DBSCAN  | Content Cell
+ACMG  | American College of Medical Genetics and Genomics
+DBSCAN  | Density-Based Spatial Clustering of Applications with Noise
 GPT  | Generative Pre-trained Transformer
-
-
-Abbreviation | Acronym
-------------   -------
-ACMG         | American College of Medical Genetics and Genomics
-DBSCAN       | Density-Based Spatial Clustering of Applications with Noise
+HGNC  | HUGO Gene Nomenclature Committee
+HGVS  |	Human Genome Variation Society
 
 ## NCBI Codeathon Disclaimer
 This software was created as part of an NCBI codeathon, a hackathon-style event focused on rapid innovation. While we encourage you to explore and adapt this code, please be aware that NCBI does not provide ongoing support for it.
