@@ -87,10 +87,14 @@ scratch/
 *.arrow
 *.xml
 *.json
+*.db
 
 # MacOS files
 .DS_Store
 ._*
+
+# llm files
+.llm*
 
 scratch*
 sandbox*
