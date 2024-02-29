@@ -49,7 +49,7 @@ for variant_id, texts in variant_id_to_texts.items():
         counter_unique_variant_id_duplicate = counter_unique_variant_id_duplicate + 1 
 
 print('\nNumber of RCV records that can be potentially reduced: ', total_reduced_records)
-print('Total nmber of RCV records: ', len(ldlr_test_data)) 
+print('Total number of RCV records: ', len(ldlr_test_data)) 
 
 print('\nNumber of variants with groupable disease names: ', counter_unique_variant_id_duplicate)
 print('Number of unique variants: ' , len(variant_id_to_texts)) # number of unique variant_id 
