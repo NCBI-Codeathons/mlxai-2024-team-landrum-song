@@ -25,14 +25,14 @@ import os
 import urllib
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 from xml.etree.ElementTree import ElementTree
 
 from Bio import Entrez
 from rich import print as rprint
 
 
-def parse_command_line_args() -> Tuple[Path, str]:
+def parse_command_line_args() -> Tuple[Path, Optional[str], str]:
     """
     Parse command line arguments, returning a file that lists genes of
     interest and an email for NCBI tracking purposes.
@@ -40,10 +40,18 @@ def parse_command_line_args() -> Tuple[Path, str]:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--genelist",
-        "-g",
+        "-G",
         type=Path,
-        required=True,
+        required=False,
         help="Text file with one, headerless column of one gene name per line.",
+    )
+    parser.add_argument(
+        "--gene",
+        "-g",
+        type=str,
+        required=False,
+        default=None,
+        help="Single gene to query ClinVar for.",
     )
     parser.add_argument(
         "--email",
@@ -54,7 +62,7 @@ def parse_command_line_args() -> Tuple[Path, str]:
     )
     args = parser.parse_args()
 
-    return args.genelist, args.email
+    return args.genelist, args.gene, args.email
 
 
 async def pull_clinvar_data(
@@ -188,6 +196,39 @@ async def save_variant_json(gene: str, data) -> str:
     return json_filename
 
 
+async def save_unique_conditions(gene: str, data) -> str:
+    """
+    Save the unique set of conditions for the given gene as a JSON file
+    to be used downstream.
+    """
+
+    # Extract unique disease names
+    unique_disease_names = {item["condition"]["text"] for item in data}
+
+    # Save unique disease names to JSON
+    unique_disease_json_filename = gene + "_unique_diseases.json"
+
+    with open(unique_disease_json_filename, "w", encoding="utf-8") as json_file:
+        # Convert the set to a list for JSON serialization
+        json.dump(list(unique_disease_names), json_file, ensure_ascii=False, indent=4)
+    print(f"Saved unique disease names to {unique_disease_json_filename}")
+
+    # Assigning an ID to each unique condition and formatting the data
+    formatted_conditions = [
+        {"cid": idx + 1, "condition": condition_text}
+        for idx, condition_text in enumerate(unique_disease_names)
+    ]
+
+    # Saving the formatted unique condition texts to a JSON file
+    json_filename = gene + "_formatted_unique_conditions.json"
+    with open(json_filename, "w", encoding="utf-8") as json_file:
+        json.dump(formatted_conditions, json_file, ensure_ascii=False, indent=4)
+
+    print(f"Saved formatted unique condition texts to {json_filename}")
+
+    return json_filename
+
+
 async def main() -> None:
     """
     Coordinate the flow of data through the above functions within an
@@ -196,7 +237,14 @@ async def main() -> None:
     """
 
     # Example usage parameters
-    gene_file, email = parse_command_line_args()
+    gene_file, gene, email = parse_command_line_args()
+
+    if gene is not None:
+        extracted_data = await pull_and_extract_data(gene, email)
+        # _ = await save_variant_xml(gene, extracted_data)
+        _ = await save_variant_json(gene, extracted_data)
+        _ = await save_unique_conditions(gene, extracted_data)
+        return
 
     # collect the list of genes
     with open(gene_file, "r", encoding="utf8") as input_handle:
@@ -205,8 +253,9 @@ async def main() -> None:
     # process each gene asynchronously
     for gene in genes:
         extracted_data = await pull_and_extract_data(gene, email)
-        _ = await save_variant_xml(gene, extracted_data)
+        # _ = await save_variant_xml(gene, extracted_data)
         _ = await save_variant_json(gene, extracted_data)
+        _ = await save_unique_conditions(gene, extracted_data)
         rprint(f"Data retrieval, extraction, and writing complete for {gene}")
 
 

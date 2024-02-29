@@ -13,7 +13,6 @@ __pycache__/
 .Python
 .venv/
 env/
-bin/
 build/
 develop-eggs/
 dist/
@@ -95,6 +94,12 @@ scratch/
 
 # llm files
 .llm*
+
+# nextflow files
+.nextflow/
+.nextflow*
+work/
+results/
 
 scratch*
 sandbox*
