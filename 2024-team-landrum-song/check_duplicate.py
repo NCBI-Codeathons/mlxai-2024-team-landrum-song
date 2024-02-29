@@ -17,7 +17,7 @@ def deduplicate_in_clusters(gene: str):
         ldlr_test_data = json.load(file)
 
     # Load LDLR_clusters.json
-    with open(gene + "_clusters.json", "r", encoding="utf8") as file:
+    with open(gene + "_clusters_curated.json", "r", encoding="utf8") as file:
         ldlr_clusters_data = json.load(file)
 
     # Step 2: Organize LDLR_clusters_data for efficient searching
