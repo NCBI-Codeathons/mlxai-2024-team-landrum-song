@@ -87,7 +87,7 @@ def register_commands(cli):
         clusters = {}
         for (id, _, content), cluster in zip(rows, assignments):
             clusters.setdefault(str(cluster), []).append(
-                {"id": str(id), "content": truncate_text(content)}
+                {"gid": str(id), "content": truncate_text(content)}
             )
         # Re-arrange into a list
         output_clusters = [{"id": k, "items": v} for k, v in clusters.items()]
@@ -126,3 +126,4 @@ def register_commands(cli):
             click.echo("]")
         else:
             click.echo(json.dumps(output_clusters, indent=4))
+
