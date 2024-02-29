@@ -1,4 +1,4 @@
-# ClinCluster: a Package for Aggregating Disease Terms in ClinVar
+# ClinCluster: A Package for Aggregating Disease Terms in ClinVar
 
 List of participants and affiliations:
 - Melissa Landrum, NIH/NCBI (Co-Team Leader)
@@ -31,11 +31,11 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 
 ### Aggregating the disease terms
 1. Extract disease names from all RCV records associated with a single gene
-  i. Extract all unique MedGen ID and their disease names
+  1. Extract all unique MedGen ID and their disease names
 
 2. Cluster the name into their umbrella disease category
-  i. Program LLM to cluster the disease terms
-  ii. Fork https://github.com/simonw/llm-cluster/blob/main/llm_cluster.py
+  1. Program LLM to cluster the disease terms
+  2. Fork https://github.com/simonw/llm-cluster/blob/main/llm_cluster.py
 
 3. Identify variant records with similar disease names that belong to the same umbrella diseases 
 
