@@ -49,6 +49,11 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 ## Future Work
 
 ## Common Acronyms
+Abbreviation  | Acronym
+------------- | -------------
+ACMG  | Content Cell
+DBSCAN  | Content Cell
+
 
 Abbreviation | Acronym
 ------------   -------
