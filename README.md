@@ -41,9 +41,10 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 
 4. Assign those RCV records with the corrected (umbrella) name 
 
-
-
 ## Results
+
+<img src="blob:chrome-untrusted://media-app/56f48609-672e-48c8-8364-1eb1882696e4" alt="Performance Metrics .jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/b9c5d6d7-64a1-4f3d-90b2-577d2a49a7cc)
+
 
 ## Future Work
 
