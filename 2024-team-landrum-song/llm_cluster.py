@@ -54,7 +54,7 @@ def register_commands(cli):
 
         # Here we switch to DBSCAN. Note that DBSCAN doesn't use the 'n_clusters' parameter.
         # You might want to expose DBSCAN parameters such as eps and min_samples to the command line.
-        clustering_model = sklearn.cluster.DBSCAN(eps=n, min_samples=3)
+        clustering_model = sklearn.cluster.DBSCAN(eps=n, min_samples=2)
         if database:
             db = sqlite_utils.Database(database)
         else:
