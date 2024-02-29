@@ -53,6 +53,7 @@ Abbreviation  | Acronym
 ------------- | -------------
 ACMG  | Content Cell
 DBSCAN  | Content Cell
+GPT  | Generative Pre-trained Transformer
 
 
 Abbreviation | Acronym
