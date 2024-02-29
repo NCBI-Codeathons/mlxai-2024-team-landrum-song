@@ -54,7 +54,7 @@ def register_commands(cli):
 
         # Here we switch to DBSCAN. Note that DBSCAN doesn't use the 'n_clusters' parameter.
         # You might want to expose DBSCAN parameters such as eps and min_samples to the command line.
-        clustering_model = sklearn.cluster.DBSCAN(eps=n, min_samples=2)
+        clustering_model = sklearn.cluster.DBSCAN(eps=n, min_samples=3)
         if database:
             db = sqlite_utils.Database(database)
         else:
@@ -87,7 +87,7 @@ def register_commands(cli):
         clusters = {}
         for (id, _, content), cluster in zip(rows, assignments):
             clusters.setdefault(str(cluster), []).append(
-                {"id": str(id), "content": truncate_text(content)}
+                {"gid": str(id), "content": truncate_text(content)}
             )
         # Re-arrange into a list
         output_clusters = [{"id": k, "items": v} for k, v in clusters.items()]
@@ -126,3 +126,4 @@ def register_commands(cli):
             click.echo("]")
         else:
             click.echo(json.dumps(output_clusters, indent=4))
+
