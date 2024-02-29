@@ -39,18 +39,16 @@ for group in data:
             n = n+1
     else:
         group_id = chr(int(group['id']) +  65) # convert to letter 
-        net.add_node(group_id, label=f"Group {group_id}", color='lightblue', size=40)
+        net.add_node(group_id, label=f"Group {group_id}", color='lightblue', size=60)
         for item in group['items']:
             # item_id = item['id']
             item_id = n 
             item_content = item['content']
-            net.add_node(item_id, label=item_content, color='lightgreen', size=30)
+            net.add_node(item_id, label=item_content, color='lightgreen', size=40)
             # if group_id != 'Noise':
             net.add_edge(group_id, item_id)
             n = n+1
     
-    #group_id = chr(ord(group_id) + 1)
-
 # Customize the network appearance
 net.set_options("""
 var options = {
