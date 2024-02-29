@@ -1,11 +1,14 @@
-import json
+import json, sys
 # https://chat.openai.com/share/1cef3a28-2555-4a79-9dc5-145cc2b1dcee 
+
+gene = sys.argv[1]
+
 # Load LDLR_test.json
-with open('data/LDLR_variants_extracted.json', 'r') as file:
+with open('data/' + gene + '_variants_extracted.json', 'r') as file:
     ldlr_test_data = json.load(file)
 
 # Load LDLR_clusters.json
-with open('LDLR_clusters.json', 'r') as file:
+with open(gene + '_clusters.json', 'r') as file:
     ldlr_clusters_data = json.load(file)
 
 # Check the first few items of each to understand their structure
@@ -46,17 +49,19 @@ for variant_id, texts in variant_id_to_texts.items():
         total_reduced_records += found_texts_count -1 
         counter_unique_variant_id_duplicate = counter_unique_variant_id_duplicate + 1 
 
-print('Number of RCV records that can be potentially reduced: ', total_reduced_records)
+print('\nNumber of RCV records that can be potentially reduced: ', total_reduced_records)
 print('Total nmber of RCV records: ', len(ldlr_test_data)) 
-print('Number of variants with groupable disease names: ', counter_unique_variant_id_duplicate)
+
+print('\nNumber of variants with groupable disease names: ', counter_unique_variant_id_duplicate)
 print('Number of unique variants: ' , len(variant_id_to_texts)) # number of unique variant_id 
+print()
 
 # Let's check the number of qualifying records found
 # len(qualifying_records), qualifying_records[:2]  # Display the count and first two for review
 
 # Step 4: Save the qualifying records into a new JSON file
 
-output_file_path = 'qualifying_records.json'
+output_file_path = gene + '_qualifying_records.json'
 with open(output_file_path, 'w') as outfile:
     json.dump(qualifying_records, outfile, indent=4)
 
