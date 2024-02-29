@@ -33,16 +33,17 @@ for group in data:
         group_id = 'Noise'
     else:
         group_id = chr(int(group['id']) +  65)  
+        net.add_node(group_id, label=f"Group {group_id}", color='lightblue', size=40)
     #print (group['id'])
     
-    net.add_node(group_id, label=f"Group {group_id}", color='lightblue', size=40)
     
     for item in group['items']:
         # item_id = item['id']
         item_id = n 
         item_content = item['content']
         net.add_node(item_id, label=item_content, color='lightgreen', size=30)
-        net.add_edge(group_id, item_id)
+        if group_id != 'Noise':
+            net.add_edge(group_id, item_id)
         n = n+1
     
     #group_id = chr(ord(group_id) + 1)
