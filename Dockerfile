@@ -63,6 +63,9 @@ RUN llm sentence-transformers register all-mpnet-base-v2
 RUN llm sentence-transformers register all-MiniLM-L12-v2
 RUN llm sentence-transformers register multi-qa-mpnet-base-dot-v1
 
+# install nextflow
+RUN python3 -m pip install nextflow
+
 # set cache and config directories for llm
 ENV LLM_USER_PATH "/scratch/.llm/.config"
 ENV HF_HOME "/scratch/.llm"

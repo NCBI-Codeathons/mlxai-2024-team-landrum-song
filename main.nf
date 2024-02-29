@@ -140,7 +140,7 @@ process CLUSTER_WITH_LLM {
 process FIND_QUALIFYING_RECORDS {
 
 	tag "${gene}"
-	publishDir params.remapped, mode: 'copy', overwrite: true
+	publishDir params.remapped, mode: 'copy', pattern: "*qualifying*" overwrite: true
 
 	errorStrategy { task.attempt < 3 ? 'retry' : params.errorMode }
 	maxRetries 2
