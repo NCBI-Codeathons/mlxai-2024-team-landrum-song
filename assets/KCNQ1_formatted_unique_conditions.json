@@ -1,0 +1,202 @@
+[
+    {
+        "cid": 1,
+        "condition": "Neonatal hypotonia"
+    },
+    {
+        "cid": 2,
+        "condition": "Acquired susceptibility to long QT syndrome 1"
+    },
+    {
+        "cid": 3,
+        "condition": "not provided"
+    },
+    {
+        "cid": 4,
+        "condition": "SUDDEN INFANT DEATH SYNDROME"
+    },
+    {
+        "cid": 5,
+        "condition": "Generalized hypotonia"
+    },
+    {
+        "cid": 6,
+        "condition": "Hypertrophic cardiomyopathy"
+    },
+    {
+        "cid": 7,
+        "condition": "Diffuse white matter abnormalities"
+    },
+    {
+        "cid": 8,
+        "condition": "Conduction disorder of the heart"
+    },
+    {
+        "cid": 9,
+        "condition": "Ventricular fibrillation"
+    },
+    {
+        "cid": 10,
+        "condition": "Recurrent spontaneous abortion"
+    },
+    {
+        "cid": 11,
+        "condition": "Ear malformation"
+    },
+    {
+        "cid": 12,
+        "condition": "Toe clinodactyly"
+    },
+    {
+        "cid": 13,
+        "condition": "Polyhydramnios"
+    },
+    {
+        "cid": 14,
+        "condition": "Rare genetic deafness"
+    },
+    {
+        "cid": 15,
+        "condition": "KCNQ1-Related Disorders"
+    },
+    {
+        "cid": 16,
+        "condition": "Cardiovascular phenotype"
+    },
+    {
+        "cid": 17,
+        "condition": "Congenital long QT syndrome"
+    },
+    {
+        "cid": 18,
+        "condition": "Abnormal nostril morphology"
+    },
+    {
+        "cid": 19,
+        "condition": "Short QT syndrome"
+    },
+    {
+        "cid": 20,
+        "condition": "Jervell and Lange-Nielsen syndrome 1"
+    },
+    {
+        "cid": 21,
+        "condition": "Generalized neonatal hypotonia"
+    },
+    {
+        "cid": 22,
+        "condition": "Long QT syndrome 1"
+    },
+    {
+        "cid": 23,
+        "condition": "Prolonged QT interval"
+    },
+    {
+        "cid": 24,
+        "condition": "not specified"
+    },
+    {
+        "cid": 25,
+        "condition": "Jervell and Lange-Nielsen syndrome"
+    },
+    {
+        "cid": 26,
+        "condition": "Secondary microcephaly"
+    },
+    {
+        "cid": 27,
+        "condition": "Cardiac arrhythmia"
+    },
+    {
+        "cid": 28,
+        "condition": "Inborn genetic diseases"
+    },
+    {
+        "cid": 29,
+        "condition": "Hearing impairment"
+    },
+    {
+        "cid": 30,
+        "condition": "Long QT syndrome 2"
+    },
+    {
+        "cid": 31,
+        "condition": "Atrial fibrillation"
+    },
+    {
+        "cid": 32,
+        "condition": "Wolff-Parkinson-White pattern"
+    },
+    {
+        "cid": 33,
+        "condition": "Abnormality of the cardiovascular system"
+    },
+    {
+        "cid": 34,
+        "condition": "Torsades de pointes"
+    },
+    {
+        "cid": 35,
+        "condition": "Abnormal cerebral white matter morphology"
+    },
+    {
+        "cid": 36,
+        "condition": "Decreased fetal movement"
+    },
+    {
+        "cid": 37,
+        "condition": "Enlarged naris"
+    },
+    {
+        "cid": 38,
+        "condition": "KCNQ1-related condition"
+    },
+    {
+        "cid": 39,
+        "condition": "Primary microcephaly"
+    },
+    {
+        "cid": 40,
+        "condition": "Atrial fibrillation, familial, 3"
+    },
+    {
+        "cid": 41,
+        "condition": "High palate"
+    },
+    {
+        "cid": 42,
+        "condition": "Beckwith-Wiedemann syndrome"
+    },
+    {
+        "cid": 43,
+        "condition": "Autosomal dominant KCNQ1-related disease"
+    },
+    {
+        "cid": 44,
+        "condition": "See cases"
+    },
+    {
+        "cid": 45,
+        "condition": "Long QT syndrome 1, recessive"
+    },
+    {
+        "cid": 46,
+        "condition": "Cardiomyopathy"
+    },
+    {
+        "cid": 47,
+        "condition": "Short QT syndrome type 2"
+    },
+    {
+        "cid": 48,
+        "condition": "Long QT syndrome 1/2, digenic"
+    },
+    {
+        "cid": 49,
+        "condition": "Familial atrial fibrillation"
+    },
+    {
+        "cid": 50,
+        "condition": "Long QT syndrome"
+    }
+]

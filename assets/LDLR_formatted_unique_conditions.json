@@ -1,0 +1,94 @@
+[
+    {
+        "cid": 1,
+        "condition": "not provided"
+    },
+    {
+        "cid": 2,
+        "condition": "Autosomal dominant familial hypercholesterolemia"
+    },
+    {
+        "cid": 3,
+        "condition": "Early-onset coronary artery disease"
+    },
+    {
+        "cid": 4,
+        "condition": "Hypercholesterolemia, autosomal dominant, type B"
+    },
+    {
+        "cid": 5,
+        "condition": "Homozygous familial hypercholesterolemia"
+    },
+    {
+        "cid": 6,
+        "condition": "Internal carotid artery dissection"
+    },
+    {
+        "cid": 7,
+        "condition": "Cardiovascular phenotype"
+    },
+    {
+        "cid": 8,
+        "condition": "Stroke disorder"
+    },
+    {
+        "cid": 9,
+        "condition": "Carotid artery occlusion"
+    },
+    {
+        "cid": 10,
+        "condition": "not specified"
+    },
+    {
+        "cid": 11,
+        "condition": "Smith-Lemli-Opitz syndrome"
+    },
+    {
+        "cid": 12,
+        "condition": "Syndromic X-linked intellectual disability Najm type"
+    },
+    {
+        "cid": 13,
+        "condition": "Inborn genetic diseases"
+    },
+    {
+        "cid": 14,
+        "condition": "Familial hypercholesterolemia"
+    },
+    {
+        "cid": 15,
+        "condition": "Hypercholesterolemia, familial, 1"
+    },
+    {
+        "cid": 16,
+        "condition": "See cases"
+    },
+    {
+        "cid": 17,
+        "condition": "Abnormal circulating lipid concentration"
+    },
+    {
+        "cid": 18,
+        "condition": "Carotid artery dissection"
+    },
+    {
+        "cid": 19,
+        "condition": "LDLR-related condition"
+    },
+    {
+        "cid": 20,
+        "condition": "Familial type 3 hyperlipoproteinemia"
+    },
+    {
+        "cid": 21,
+        "condition": "FH LEIDEN 1"
+    },
+    {
+        "cid": 22,
+        "condition": "Aortic dissection"
+    },
+    {
+        "cid": 23,
+        "condition": "Hypercholesterolemia"
+    }
+]

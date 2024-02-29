@@ -1,0 +1,290 @@
+[
+    {
+        "cid": 1,
+        "condition": "not provided"
+    },
+    {
+        "cid": 2,
+        "condition": "Progressive familial heart block"
+    },
+    {
+        "cid": 3,
+        "condition": "SUDDEN INFANT DEATH SYNDROME"
+    },
+    {
+        "cid": 4,
+        "condition": "Sick sinus syndrome 1"
+    },
+    {
+        "cid": 5,
+        "condition": "SCN5A-Related Disorders"
+    },
+    {
+        "cid": 6,
+        "condition": "Progressive familial heart block, type 1A"
+    },
+    {
+        "cid": 7,
+        "condition": "Sudden cardiac death"
+    },
+    {
+        "cid": 8,
+        "condition": "Hypertrophic cardiomyopathy"
+    },
+    {
+        "cid": 9,
+        "condition": "Sudden cardiac arrest"
+    },
+    {
+        "cid": 10,
+        "condition": "SCN5A-related disease"
+    },
+    {
+        "cid": 11,
+        "condition": "Heart block, nonprogressive"
+    },
+    {
+        "cid": 12,
+        "condition": "Conduction disorder of the heart"
+    },
+    {
+        "cid": 13,
+        "condition": "Catecholaminergic polymorphic ventricular tachycardia 1"
+    },
+    {
+        "cid": 14,
+        "condition": "Acquired long QT syndrome"
+    },
+    {
+        "cid": 15,
+        "condition": "Ventricular fibrillation"
+    },
+    {
+        "cid": 16,
+        "condition": "Long QT syndrome, drug-associated"
+    },
+    {
+        "cid": 17,
+        "condition": "Dilated cardiomyopathy 1A"
+    },
+    {
+        "cid": 18,
+        "condition": "Atrioventricular block"
+    },
+    {
+        "cid": 19,
+        "condition": "SCN5A-related condition"
+    },
+    {
+        "cid": 20,
+        "condition": "Left ventricular noncompaction 1"
+    },
+    {
+        "cid": 21,
+        "condition": "Pulmonary valve stenosis (rare)"
+    },
+    {
+        "cid": 22,
+        "condition": "Sick sinus syndrome"
+    },
+    {
+        "cid": 23,
+        "condition": "Paroxysmal familial ventricular fibrillation"
+    },
+    {
+        "cid": 24,
+        "condition": "Long QT syndrome 3, acquired, susceptibility to"
+    },
+    {
+        "cid": 25,
+        "condition": "Cardiac conduction defect, nonprogressive"
+    },
+    {
+        "cid": 26,
+        "condition": "Cardiovascular phenotype"
+    },
+    {
+        "cid": 27,
+        "condition": "Syncope"
+    },
+    {
+        "cid": 28,
+        "condition": "Congenital long QT syndrome"
+    },
+    {
+        "cid": 29,
+        "condition": "Long QT syndrome 3/6, digenic"
+    },
+    {
+        "cid": 30,
+        "condition": "Migraine"
+    },
+    {
+        "cid": 31,
+        "condition": "Familial isolated arrhythmogenic right ventricular dysplasia"
+    },
+    {
+        "cid": 32,
+        "condition": "Fetal akinesia deformation sequence 1"
+    },
+    {
+        "cid": 33,
+        "condition": "SCN5A-related conditions"
+    },
+    {
+        "cid": 34,
+        "condition": "Brugada syndrome"
+    },
+    {
+        "cid": 35,
+        "condition": "Brugada syndrome (shorter-than-normal QT interval)"
+    },
+    {
+        "cid": 36,
+        "condition": "Long QT syndrome 1"
+    },
+    {
+        "cid": 37,
+        "condition": "not specified"
+    },
+    {
+        "cid": 38,
+        "condition": "Conduction system disorder"
+    },
+    {
+        "cid": 39,
+        "condition": "Primary familial hypertrophic cardiomyopathy"
+    },
+    {
+        "cid": 40,
+        "condition": "Atrial standstill 1, digenic"
+    },
+    {
+        "cid": 41,
+        "condition": "Dilated cardiomyopathy 1E"
+    },
+    {
+        "cid": 42,
+        "condition": "SCN5A-Related Arrhythmias"
+    },
+    {
+        "cid": 43,
+        "condition": "Cardiac arrhythmia"
+    },
+    {
+        "cid": 44,
+        "condition": "AV junctional rhythm"
+    },
+    {
+        "cid": 45,
+        "condition": "Inborn genetic diseases"
+    },
+    {
+        "cid": 46,
+        "condition": "SCN5A-related disorder"
+    },
+    {
+        "cid": 47,
+        "condition": "Death in early adulthood"
+    },
+    {
+        "cid": 48,
+        "condition": "Left ventricular noncompaction cardiomyopathy"
+    },
+    {
+        "cid": 49,
+        "condition": "Arrhythmogenic right ventricular cardiomyopathy"
+    },
+    {
+        "cid": 50,
+        "condition": "Hemiplegia"
+    },
+    {
+        "cid": 51,
+        "condition": "Long QT syndrome 2"
+    },
+    {
+        "cid": 52,
+        "condition": "Ventricular fibrillation, paroxysmal familial, type 1"
+    },
+    {
+        "cid": 53,
+        "condition": "Atrial fibrillation"
+    },
+    {
+        "cid": 54,
+        "condition": "Atrial fibrillation, familial, 10"
+    },
+    {
+        "cid": 55,
+        "condition": "Wolff-Parkinson-White pattern"
+    },
+    {
+        "cid": 56,
+        "condition": "Arthrogryposis multiplex congenita"
+    },
+    {
+        "cid": 57,
+        "condition": "Torsades de pointes"
+    },
+    {
+        "cid": 58,
+        "condition": "Death in infancy"
+    },
+    {
+        "cid": 59,
+        "condition": "Long QT syndrome 2/3, digenic"
+    },
+    {
+        "cid": 60,
+        "condition": "Brugada syndrome 1"
+    },
+    {
+        "cid": 61,
+        "condition": "Primary familial dilated cardiomyopathy"
+    },
+    {
+        "cid": 62,
+        "condition": "See cases"
+    },
+    {
+        "cid": 63,
+        "condition": "Ventricular tachycardia"
+    },
+    {
+        "cid": 64,
+        "condition": "Sudden unexplained death"
+    },
+    {
+        "cid": 65,
+        "condition": "Cardiomyopathy"
+    },
+    {
+        "cid": 66,
+        "condition": "Sinus node disease"
+    },
+    {
+        "cid": 67,
+        "condition": "Primary dilated cardiomyopathy"
+    },
+    {
+        "cid": 68,
+        "condition": "Long QT syndrome 3"
+    },
+    {
+        "cid": 69,
+        "condition": "Brugada syndrome, lidocaine-induced"
+    },
+    {
+        "cid": 70,
+        "condition": "Cardiac arrest"
+    },
+    {
+        "cid": 71,
+        "condition": "Long QT syndrome"
+    },
+    {
+        "cid": 72,
+        "condition": "Dilated Cardiomyopathy, Dominant"
+    }
+]

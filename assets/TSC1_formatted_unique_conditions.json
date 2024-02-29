@@ -1,0 +1,134 @@
+[
+    {
+        "cid": 1,
+        "condition": "not provided"
+    },
+    {
+        "cid": 2,
+        "condition": "Ovarian cancer"
+    },
+    {
+        "cid": 3,
+        "condition": "Hereditary cancer-predisposing syndrome"
+    },
+    {
+        "cid": 4,
+        "condition": "Cardiac rhabdomyoma"
+    },
+    {
+        "cid": 5,
+        "condition": "Kidney angiomyolipoma"
+    },
+    {
+        "cid": 6,
+        "condition": "Seizure"
+    },
+    {
+        "cid": 7,
+        "condition": "Lymphangiomyomatosis"
+    },
+    {
+        "cid": 8,
+        "condition": "TSC1-related condition"
+    },
+    {
+        "cid": 9,
+        "condition": "Autism spectrum disorder"
+    },
+    {
+        "cid": 10,
+        "condition": "Multiple renal cysts"
+    },
+    {
+        "cid": 11,
+        "condition": "Cortical tubers"
+    },
+    {
+        "cid": 12,
+        "condition": "Craniopharyngioma"
+    },
+    {
+        "cid": 13,
+        "condition": "Tuberous sclerosis syndrome"
+    },
+    {
+        "cid": 14,
+        "condition": "not specified"
+    },
+    {
+        "cid": 15,
+        "condition": "Neuroblastoma"
+    },
+    {
+        "cid": 16,
+        "condition": "Keratoconus"
+    },
+    {
+        "cid": 17,
+        "condition": "Renal insufficiency"
+    },
+    {
+        "cid": 18,
+        "condition": "Inborn genetic diseases"
+    },
+    {
+        "cid": 19,
+        "condition": "Astrocytoma"
+    },
+    {
+        "cid": 20,
+        "condition": "Adenoma sebaceum"
+    },
+    {
+        "cid": 21,
+        "condition": "Cortical dysplasia"
+    },
+    {
+        "cid": 22,
+        "condition": "Malignant tumor of urinary bladder"
+    },
+    {
+        "cid": 23,
+        "condition": "Renal cortical cysts"
+    },
+    {
+        "cid": 24,
+        "condition": "Isolated focal cortical dysplasia type II"
+    },
+    {
+        "cid": 25,
+        "condition": "Primitive neuroectodermal tumor"
+    },
+    {
+        "cid": 26,
+        "condition": "Tuberous sclerosis 1"
+    },
+    {
+        "cid": 27,
+        "condition": "See cases"
+    },
+    {
+        "cid": 28,
+        "condition": "Acute myeloid leukemia"
+    },
+    {
+        "cid": 29,
+        "condition": "Hamartoma"
+    },
+    {
+        "cid": 30,
+        "condition": "Focal cortical dysplasia of Taylor type 2B"
+    },
+    {
+        "cid": 31,
+        "condition": "Angiofibromas"
+    },
+    {
+        "cid": 32,
+        "condition": "Malignant tumor of breast"
+    },
+    {
+        "cid": 33,
+        "condition": "Autosomal dominant epilepsy"
+    }
+]
