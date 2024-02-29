@@ -1,0 +1,365 @@
+[
+    {
+        "id": "-1",
+        "items": [
+            {
+                "gid": "1",
+                "content": "Syncope"
+            },
+            {
+                "gid": "12",
+                "content": "Cardiovascular phenotype"
+            },  
+            {
+                "gid": "14",
+                "content": "SUDDEN INFANT DEATH SYNDROME"
+            },
+            {
+                "gid": "16",
+                "content": "Death in early adulthood"
+            },
+            {
+                "gid": "17",
+                "content": "Fetal akinesia deformation sequence 1"
+            },
+            {
+                "gid": "23",
+                "content": "not specified"
+            },
+            {
+                "gid": "25",
+                "content": "See cases"
+            },
+            {
+                "gid": "27",
+                "content": "Cardiac arrhythmia"
+            },
+            {
+                "gid": "29",
+                "content": "Migraine"
+            },
+            {
+                "gid": "30",
+                "content": "Inborn genetic diseases"
+            },
+            {
+                "gid": "35",
+                "content": "Wolff-Parkinson-White pattern"
+            },
+            {
+                "gid": "38",
+                "content": "Arthrogryposis multiplex congenita"
+            },
+            {
+                "gid": "42",
+                "content": "Atrial standstill 1, digenic"
+            },
+            {
+                "gid": "44",
+                "content": "Death in infancy"
+            },
+            {
+                "gid": "51",
+                "content": "Torsades de pointes"
+            },
+            {
+                "gid": "54",
+                "content": "not provided"
+            },
+            {
+                "gid": "6",
+                "content": "Pulmonary valve stenosis (rare)"
+            },
+            {
+                "gid": "64",
+                "content": "AV junctional rhythm"
+            },
+                        {
+                "gid": "8",
+                "content": "Hemiplegia"
+            },
+            {
+                "gid": "11",
+                "content": "Cardiac arrest"
+            },
+            {
+                "gid": "50",
+                "content": "Sudden unexplained death"
+            },
+            {
+                "gid": "52",
+                "content": "Sudden cardiac death"
+            },
+            {
+                "gid": "58",
+                "content": "Sudden cardiac arrest"
+            },
+            {
+                "gid": "15",
+                "content": "Long QT syndrome 1"
+            },
+            {
+                "gid": "72",
+                "content": "Long QT syndrome 2"
+            },
+            {
+                "gid": "45",
+                "content": "Dilated cardiomyopathy 1A"
+            },
+            {
+                "gid": "32",
+                "content": "Cardiomyopathy"
+            }
+        ]
+    },
+    {
+        "id": "0",
+        "items": [
+            {
+                "gid": "10",
+                "content": "Ventricular fibrillation"
+            },
+            {
+                "gid": "20",
+                "content": "Ventricular fibrillation, paroxysmal familial, type 1"
+            },
+            {
+                "gid": "31",
+                "content": "Paroxysmal familial ventricular fibrillation"
+            }
+        ]
+    },
+    {
+    "id": "8",
+        "items": [
+            {
+                "gid": "69",
+                "content": "Atrial fibrillation, familial, 10"
+            },
+            {
+                "gid": "9",
+                "content": "Atrial fibrillation"
+            }
+        ]
+    },
+    {
+        "id": "1",
+        "items": [
+            {
+                "gid": "18",
+                "content": "Long QT syndrome 3, acquired, susceptibility to"
+            },
+            {
+                "gid": "24",
+                "content": "Long QT syndrome 2/3, digenic"
+            },
+            {
+                "gid": "33",
+                "content": "Long QT syndrome"
+            },
+            {
+                "gid": "34",
+                "content": "Long QT syndrome 3"
+            },
+            {
+                "gid": "4",
+                "content": "Congenital long QT syndrome"
+            },
+            {
+                "gid": "55",
+                "content": "Long QT syndrome 3/6, digenic"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "items": [
+            {
+                "gid": "48",
+                "content": "Acquired long QT syndrome"
+            },
+            {
+                "gid": "68",
+                "content": "Long QT syndrome, drug-associated"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "items": [
+            {
+                "gid": "2",
+                "content": "Familial isolated arrhythmogenic right ventricular dysplasia"
+            },
+            {
+                "gid": "36",
+                "content": "Arrhythmogenic right ventricular cardiomyopathy"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "items": [
+            {
+                "gid": "21",
+                "content": "Primary familial hypertrophic cardiomyopathy"
+            },
+            {
+                "gid": "41",
+                "content": "Hypertrophic cardiomyopathy"
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "items": [
+            {
+                "gid": "13",
+                "content": "Progressive familial heart block, type 1A"
+            },
+            {
+                "gid": "19",
+                "content": "Progressive familial heart block"
+            },
+            {
+                "gid": "22",
+                "content": "Atrioventricular block"
+            },
+            {
+                "gid": "7",
+                "content": "Heart block, nonprogressive"
+            }
+        ]
+    },
+    {
+        "id": "13",
+        "items": [
+            {
+                "gid": "61",
+                "content": "Left ventricular noncompaction cardiomyopathy"
+            },
+            {
+                "gid": "63",
+                "content": "Left ventricular noncompaction 1"
+            }
+        ]
+    },
+    {
+        "id": "14",
+        "items": [
+            {
+                "gid": "5",
+                "content": "Catecholaminergic polymorphic ventricular tachycardia 1"
+            },
+            {
+                "gid": "67",
+                "content": "Ventricular tachycardia"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "items": [  
+            {
+                "gid": "46",
+                "content": "Primary familial dilated cardiomyopathy"
+            },
+            {
+                "gid": "59",
+                "content": "Dilated cardiomyopathy 1E"
+            },
+            {
+                "gid": "60",
+                "content": "Dilated Cardiomyopathy, Dominant"
+            },
+            {
+                "gid": "65",
+                "content": "Primary dilated cardiomyopathy"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "items": [
+            {
+                "gid": "26",
+                "content": "Sick sinus syndrome 1"
+            },
+            {
+                "gid": "49",
+                "content": "Sick sinus syndrome"
+            },
+            {
+                "gid": "62",
+                "content": "Sinus node disease"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "items": [
+            {
+                "gid": "28",
+                "content": "Conduction disorder of the heart"
+            },
+            {
+                "gid": "40",
+                "content": "Conduction system disorder"
+            },
+            {
+                "gid": "53",
+                "content": "Cardiac conduction defect, nonprogressive"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "items": [
+            {
+                "gid": "3",
+                "content": "Brugada syndrome (shorter-than-normal QT interval)"
+            },
+            {
+                "gid": "39",
+                "content": "Brugada syndrome, lidocaine-induced"
+            },
+            {
+                "gid": "70",
+                "content": "Brugada syndrome"
+            },
+            {
+                "gid": "71",
+                "content": "Brugada syndrome 1"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "items": [
+            {
+                "gid": "37",
+                "content": "SCN5A-related conditions"
+            },
+            {
+                "gid": "43",
+                "content": "SCN5A-related condition"
+            },
+            {
+                "gid": "47",
+                "content": "SCN5A-related disorder"
+            },
+            {
+                "gid": "56",
+                "content": "SCN5A-Related Disorders"
+            },
+            {
+                "gid": "57",
+                "content": "SCN5A-Related Arrhythmias"
+            },
+            {
+                "gid": "66",
+                "content": "SCN5A-related disease"
+            }
+        ]
+    }
+]

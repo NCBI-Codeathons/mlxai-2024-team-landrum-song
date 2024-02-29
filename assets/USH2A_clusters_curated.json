@@ -1,0 +1,280 @@
+[
+    {
+        "id": "0",
+        "items": [
+            {
+                "gid": "1",
+                "content": "Hearing impairment"
+            },
+            {
+                "gid": "13",
+                "content": "Nonsyndromic genetic hearing loss"
+            },
+            {
+                "gid": "2",
+                "content": "Childhood onset hearing loss"
+            },
+            {
+                "gid": "26",
+                "content": "Rare genetic deafness"
+            },
+            {
+                "gid": "34",
+                "content": "Congenital sensorineural hearing impairment"
+            }
+        ]
+    },
+    {
+        "id": "-1",
+        "items": [
+            {
+                "gid": "10",
+                "content": "Ear malformation"
+            },
+            {
+                "gid": "11",
+                "content": "Leber congenital amaurosis"
+            },
+            {
+                "gid": "12",
+                "content": "Brisk reflexes"
+            },
+            {
+                "gid": "14",
+                "content": "Cognitive impairment"
+            },
+            {
+                "gid": "16",
+                "content": "Short stature"
+            },
+            {
+                "gid": "17",
+                "content": "Retinal pigment epithelial atrophy"
+            },
+            {
+                "gid": "20",
+                "content": "Abnormal autonomic nervous system physiology"
+            },
+            {
+                "gid": "21",
+                "content": "not specified"
+            },
+            {
+                "gid": "22",
+                "content": "See cases"
+            },
+            {
+                "gid": "24",
+                "content": "Inborn genetic diseases"
+            },
+            {
+                "gid": "29",
+                "content": "Delayed speech and language development"
+            },
+            {
+                "gid": "30",
+                "content": "Anxiety"
+            },
+            {
+                "gid": "35",
+                "content": "Amblyopia"
+            },
+            {
+                "gid": "37",
+                "content": "Blindness"
+            },
+            {
+                "gid": "4",
+                "content": "Surfactant metabolism dysfunction, pulmonary, 2"
+            },
+            {
+                "gid": "42",
+                "content": "not provided"
+            },
+            {
+                "gid": "43",
+                "content": "Motor delay"
+            },
+            {
+                "gid": "44",
+                "content": "Chronic pain"
+            },
+            {
+                "gid": "48",
+                "content": "Congenital stationary night blindness"
+            },
+            {
+                "gid": "51",
+                "content": "Multiple joint contractures"
+            },
+            {
+                "gid": "53",
+                "content": "Dislocated radial head"
+            },
+            {
+                "gid": "57",
+                "content": "Familial aplasia of the vermis"
+            },
+            {
+                "gid": "6",
+                "content": "High palate"
+            },
+            {
+                "gid": "7",
+                "content": "Bardet-Biedl syndrome"
+            },
+            {
+                "gid": "9",
+                "content": "Distal arthrogryposis"
+            },
+            {
+                "gid": "27",
+                "content": "Autosomal dominant nonsyndromic hearing loss 36"
+            },
+            {
+                "gid": "40",
+                "content": "Usher syndrome type 1"
+            },
+            {
+                "gid": "23",
+                "content": "Usher syndrome type 3A"
+            },
+            {
+                "gid": "41",
+                "content": "Cone-rod dystrophy 3"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "items": [
+            {
+                "gid": "15",
+                "content": "Congenital cerebellar hypoplasia"
+            },
+            {
+                "gid": "31",
+                "content": "Hypoplasia of the brainstem"
+            },
+            {
+                "gid": "55",
+                "content": "Cerebellar hemisphere hypoplasia"
+            }
+        ]
+    },
+    {
+        "id": "1",
+        "items": [
+            {
+                "gid": "18",
+                "content": "Abnormality of upper limb joint"
+            },
+            {
+                "gid": "39",
+                "content": "Abnormality of the upper limb"
+            },
+            {
+                "gid": "54",
+                "content": "Abnormal upper limb bone morphology"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "items": [
+            {
+                "gid": "19",
+                "content": "Usher syndrome"
+            },
+            {
+                "gid": "33",
+                "content": "Usher syndrome type 2"
+            },
+            {
+                "gid": "8",
+                "content": "Usher syndrome type 2A"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "items": [
+            {
+                "gid": "25",
+                "content": "Autosomal recessive retinitis pigmentosa"
+            },
+            {
+                "gid": "36",
+                "content": "Pigmentary retinopathy"
+            },
+            {
+                "gid": "45",
+                "content": "Retinitis pigmentosa 39"
+            },
+            {
+                "gid": "47",
+                "content": "Retinitis pigmentosa-deafness syndrome"
+            },
+            {
+                "gid": "5",
+                "content": "Retinitis pigmentosa"
+            },
+            {
+                "gid": "50",
+                "content": "Retinitis Pigmentosa, Recessive"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "items": [
+            {
+                "gid": "32",
+                "content": "Abnormal macular morphology"
+            },
+            {
+                "gid": "38",
+                "content": "Macular dystrophy"
+            },
+            {
+                "gid": "46",
+                "content": "Retinal degeneration"
+            },
+            {
+                "gid": "52",
+                "content": "Retinal dystrophy"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "items": [
+            {
+                "gid": "49",
+                "content": "Rod-cone dystrophy"
+            },
+            {
+                "gid": "56",
+                "content": "Cone-rod dystrophy"
+            },
+            {
+                "gid": "58",
+                "content": "Progressive cone dystrophy (without rod involvement)"
+            }
+        ]
+    }
+    ,
+    {
+        "id": "6",
+        "items": [
+            {
+                "gid": "28",
+                "content": "USH2A-related condition"
+            },
+            {
+                "gid": "3",
+                "content": "USH2A-Related Disorders"
+            }
+        ]
+    }
+]

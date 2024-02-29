@@ -1,0 +1,237 @@
+[
+    {
+        "id": "-1",
+        "items": [
+            {
+                "gid": "1",
+                "content": "Hearing impairment"
+            },
+            {
+                "gid": "10",
+                "content": "Cardiovascular phenotype"
+            },
+            {
+                "gid": "13",
+                "content": "SUDDEN INFANT DEATH SYNDROME"
+            },
+            {
+                "gid": "16",
+                "content": "not specified"
+            },
+            {
+                "gid": "18",
+                "content": "See cases"
+            },
+            {
+                "gid": "19",
+                "content": "Beckwith-Wiedemann syndrome"
+            },
+            {
+                "gid": "2",
+                "content": "Abnormal nostril morphology"
+            },
+            {
+                "gid": "20",
+                "content": "Decreased fetal movement"
+            },
+            {
+                "gid": "21",
+                "content": "Cardiac arrhythmia"
+            },
+            {
+                "gid": "22",
+                "content": "Conduction disorder of the heart"
+            },
+            {
+                "gid": "24",
+                "content": "Inborn genetic diseases"
+            },
+            {
+                "gid": "25",
+                "content": "Secondary microcephaly"
+            },
+            {
+                "gid": "28",
+                "content": "Wolff-Parkinson-White pattern"
+            },
+            {
+                "gid": "29",
+                "content": "Cardiomyopathy"
+            },
+            {
+                "gid": "3",
+                "content": "High palate"
+            },
+            {
+                "gid": "30",
+                "content": "Rare genetic deafness"
+            },
+            {
+                "gid": "31",
+                "content": "Enlarged naris"
+            },
+            {
+                "gid": "32",
+                "content": "Primary microcephaly"
+            },
+            {
+                "gid": "35",
+                "content": "Hypertrophic cardiomyopathy"
+            },
+            {
+                "gid": "36",
+                "content": "Prolonged QT interval"
+            },
+            {
+                "gid": "37",
+                "content": "Abnormality of the cardiovascular system"
+            },
+            {
+                "gid": "39",
+                "content": "Torsades de pointes"
+            },
+            {
+                "gid": "41",
+                "content": "not provided"
+            },
+            {
+                "gid": "44",
+                "content": "Abnormal cerebral white matter morphology"
+            },
+            {
+                "gid": "45",
+                "content": "Diffuse white matter abnormalities"
+            },
+            {
+                "gid": "46",
+                "content": "Recurrent spontaneous abortion"
+            },
+            {
+                "gid": "5",
+                "content": "Toe clinodactyly"
+            },
+            {
+                "gid": "6",
+                "content": "Polyhydramnios"
+            },
+            {
+                "gid": "9",
+                "content": "Ear malformation"
+            },
+            {
+                "gid": "15",
+                "content": "Long QT syndrome 1/2, digenic"
+            },
+            {
+                "gid": "50",
+                "content": "Long QT syndrome 2"
+            }
+        ]
+    },
+    {
+        "id": "0",
+        "items": [
+            {
+                "gid": "12",
+                "content": "Long QT syndrome 1"
+            },
+            {
+                "gid": "27",
+                "content": "Long QT syndrome"
+            },
+            {
+                "gid": "33",
+                "content": "Acquired susceptibility to long QT syndrome 1"
+            },
+            {
+                "gid": "4",
+                "content": "Congenital long QT syndrome"
+            }
+        ]
+    },
+    {
+        "id": "1",
+        "items": [
+            {
+                "gid": "23",
+                "content": "Generalized hypotonia"
+            },
+            {
+                "gid": "43",
+                "content": "Generalized neonatal hypotonia"
+            },
+            {
+                "gid": "47",
+                "content": "Neonatal hypotonia"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "items": [
+            {
+                "gid": "38",
+                "content": "KCNQ1-related condition"
+            },
+            {
+                "gid": "48",
+                "content": "KCNQ1-Related Disorders"
+            },
+            {
+                "gid": "49",
+                "content": "Autosomal dominant KCNQ1-related disease"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "items": [
+            {
+                "gid": "40",
+                "content": "Atrial fibrillation, familial, 3"
+            },
+            {
+                "gid": "42",
+                "content": "Familial atrial fibrillation"
+            },
+            {
+                "gid": "7",
+                "content": "Atrial fibrillation"
+            },
+            {
+                "gid": "8",
+                "content": "Ventricular fibrillation"
+            }
+            ]
+      },
+    {
+        "id": "4",
+        "items": [
+            {
+                "gid": "34",
+                "content": "Long QT syndrome 1, recessive"
+            },
+            {
+                "gid": "11",
+                "content": "Jervell and Lange-Nielsen syndrome"
+            },
+            {
+                "gid": "14",
+                "content": "Jervell and Lange-Nielsen syndrome 1"
+            }
+            ]
+    },
+    {
+        "id": "5",
+        "items": [
+            {
+                "gid": "17",
+                "content": "Short QT syndrome type 2"
+            },
+            {
+                "gid": "26",
+                "content": "Short QT syndrome"
+            }
+        ]
+    }
+]

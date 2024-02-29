@@ -1,0 +1,102 @@
+[
+    {
+        "id": "-1",
+        "items": [
+            {
+                "gid": "1",
+                "content": "not provided"
+            },
+            {
+                "gid": "10",
+                "content": "not specified"
+            },
+            {
+                "gid": "11",
+                "content": "Smith-Lemli-Opitz syndrome"
+            },
+            {
+                "gid": "12",
+                "content": "Syndromic X-linked intellectual disability Najm type"
+            },
+            {
+                "gid": "13",
+                "content": "Inborn genetic diseases"
+            },
+            {
+                "gid": "16",
+                "content": "See cases"
+            },
+            {
+                "gid": "17",
+                "content": "Abnormal circulating lipid concentration"
+            },
+            {
+                "gid": "19",
+                "content": "LDLR-related condition"
+            },          
+            {
+                "gid": "22",
+                "content": "Aortic dissection"
+            },
+            {
+                "gid": "3",
+                "content": "Early-onset coronary artery disease"
+            },
+            {
+                "gid": "7",
+                "content": "Cardiovascular phenotype"
+            },
+            {
+                "gid": "8",
+                "content": "Stroke disorder"
+            },{
+                "gid": "20",
+                "content": "Familial type 3 hyperlipoproteinemia"
+            },
+            {
+                "gid": "4",
+                "content": "Hypercholesterolemia, autosomal dominant, type B"
+            }, {
+                "gid": "18",
+                "content": "Carotid artery dissection"
+            },
+            {
+                "gid": "6",
+                "content": "Internal carotid artery dissection"
+            },
+            {
+                "gid": "9",
+                "content": "Carotid artery occlusion"
+            }
+        ]
+    },
+    {
+        "id": "0",
+        "items": [
+            {
+                "gid": "14",
+                "content": "Familial hypercholesterolemia"
+            },
+            {
+                "gid": "15",
+                "content": "Hypercholesterolemia, familial, 1"
+            },
+            {
+                "gid": "2",
+                "content": "Autosomal dominant familial hypercholesterolemia"
+            },
+            {
+                "gid": "23",
+                "content": "Hypercholesterolemia"
+            },       
+            {
+                "gid": "5",
+                "content": "Homozygous familial hypercholesterolemia"
+            },
+            {
+                "gid": "21",
+                "content": "FH LEIDEN 1"
+            }
+        ]
+    } 
+]

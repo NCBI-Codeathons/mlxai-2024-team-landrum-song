@@ -1,0 +1,150 @@
+[
+    {
+        "id": "-1",
+        "items": [
+            {
+                "gid": "1",
+                "content": "Acute myeloid leukemia"
+            },
+            {
+                "gid": "10",
+                "content": "Renal insufficiency"
+            },
+            {
+                "gid": "11",
+                "content": "See cases"
+            },
+            {
+                "gid": "13",
+                "content": "Inborn genetic diseases"
+            },
+            {
+                "gid": "14",
+                "content": "Craniopharyngioma"
+            },
+            {
+                "gid": "15",
+                "content": "Autism spectrum disorder"
+            },
+            {
+                "gid": "16",
+                "content": "Neuroblastoma"
+            },
+            {
+                "gid": "17",
+                "content": "Keratoconus"
+            },
+            {
+                "gid": "20",
+                "content": "Cardiac rhabdomyoma"
+            },
+            {
+                "gid": "22",
+                "content": "Lymphangiomyomatosis"
+            },
+            {
+                "gid": "23",
+                "content": "not provided"
+            },
+            {
+                "gid": "24",
+                "content": "Ovarian cancer"
+            },
+            {
+                "gid": "25",
+                "content": "Malignant tumor of urinary bladder"
+            },
+            {
+                "gid": "27",
+                "content": "Adenoma sebaceum"
+            },
+            {
+                "gid": "29",
+                "content": "Autosomal dominant epilepsy"
+            },
+            {
+                "gid": "30",
+                "content": "TSC1-related condition"
+            },
+            {
+                "gid": "31",
+                "content": "Primitive neuroectodermal tumor"
+            },
+            {
+                "gid": "4",
+                "content": "Hamartoma"
+            },
+            {
+                "gid": "5",
+                "content": "Hereditary cancer-predisposing syndrome"
+            },
+            {
+                "gid": "6",
+                "content": "Astrocytoma"
+            },
+            {
+                "gid": "7",
+                "content": "Seizure"
+            },
+            {
+                "gid": "8",
+                "content": "Malignant tumor of breast"
+            },
+            {
+                "gid": "9",
+                "content": "not specified"
+            },
+            {
+                "gid": "18",
+                "content": "Cortical tubers"
+            },
+            {
+                "gid": "12",
+                "content": "Multiple renal cysts"
+            },
+            {
+                "gid": "21",
+                "content": "Renal cortical cysts"
+            },
+            {
+                "gid": "26",
+                "content": "Kidney angiomyolipoma"
+            },
+            {
+                "gid": "33",
+                "content": "Angiofibromas"
+            }
+        ]
+    },
+    {
+        "id": "0",
+        "items": [
+            
+            {
+                "gid": "19",
+                "content": "Tuberous sclerosis 1"
+            },
+            {
+                "gid": "2",
+                "content": "Tuberous sclerosis syndrome"
+            }
+        ]
+    },
+    {
+        "id": "1",
+        "items": [
+            {
+                "gid": "28",
+                "content": "Isolated focal cortical dysplasia type II"
+            },
+            {
+                "gid": "3",
+                "content": "Focal cortical dysplasia of Taylor type 2B"
+            },
+            {
+                "gid": "32",
+                "content": "Cortical dysplasia"
+            }
+        ]
+    }
+]
