@@ -2,7 +2,7 @@ import click
 import json
 import llm
 import numpy as np
-import sklearn.cluster  # No change needed here, but we'll use DBSCAN instead of MiniBatchKMeans
+import sklearn.cluster  # No change needed here, but use DBSCAN instead of MiniBatchKMeans
 import sqlite_utils
 import textwrap
 
@@ -43,7 +43,7 @@ def register_commands(cli):
         Example usage, to create clusters based on DBSCAN algorithm:
 
         \b
-            llm cluster my_collection -1  # Note: 'n' argument will be ignored for DBSCAN
+            llm cluster my_collection -1 
 
         Outputs a JSON array of {"id": "cluster_id", "items": [list of items]}
 
@@ -52,8 +52,7 @@ def register_commands(cli):
         """
         from llm.cli import get_default_model, get_key
 
-        # Here we switch to DBSCAN. Note that DBSCAN doesn't use the 'n_clusters' parameter.
-        # You might want to expose DBSCAN parameters such as eps and min_samples to the command line.
+        # Here switch to DBSCAN. Note that DBSCAN doesn't use the 'n_clusters' parameter.
         clustering_model = sklearn.cluster.DBSCAN(eps=n, min_samples=3)
         if database:
             db = sqlite_utils.Database(database)
