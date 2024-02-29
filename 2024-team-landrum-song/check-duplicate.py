@@ -3,7 +3,7 @@ import json, sys
 gene = sys.argv[1]
 
 # Load LDLR_test.json
-with open('data/' + gene + '_variants_extracted.json', 'r') as file:
+with open( gene + '_variants_extracted.json', 'r') as file:
     ldlr_test_data = json.load(file)
 
 # Load LDLR_clusters.json
