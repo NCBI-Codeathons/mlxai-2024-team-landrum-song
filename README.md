@@ -29,6 +29,19 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 
 <img src="blob:chrome-untrusted://media-app/8428382f-fad0-428a-a345-3ed8c32cd871" alt="DBSCAN_ cluster the disease names.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/fcbfacd5-d0bc-4d14-8368-1e02b8e53c63)
 
+### Aggregating the disease terms
+1. Extract disease names from all RCV records associated with a single gene
+  * Extract all unique MedGen ID and their disease names
+
+2. Cluster the name into their umbrella disease category
+  * Program LLM to cluster the disease terms
+  * Fork https://github.com/simonw/llm-cluster/blob/main/llm_cluster.py
+
+3. Identify variant records with similar disease names that belong to the same umbrella diseases 
+
+4. Assign those RCV records with the corrected (umbrella) name 
+
+
 
 ## Results
 
