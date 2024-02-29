@@ -8,7 +8,6 @@ List of participants and affiliations:
 - Nicholas Minor, University of Wisconsin
 - Michael Muchow, Unaffiliated
 - Rebecca Orris, NIH/NCBI
-- Hasitha Premathilake, NIH/NIA
 - Wengang Zhang, NIH/NCI
 
 ## Project Goals
