@@ -1,5 +1,4 @@
 import json, sys
-# https://chat.openai.com/share/1cef3a28-2555-4a79-9dc5-145cc2b1dcee 
 
 gene = sys.argv[1]
 
@@ -67,39 +66,3 @@ with open(output_file_path, 'w') as outfile:
 
 print('Write ', output_file_path)
 
-
-
-# # Adjusting the process to include only the qualifying matching records
-# qualifying_matching_records = []
-# for record in ldlr_test_data:
-#     text = record['condition']['text'].lower()
-#     # Check if the record's text is found in the content-to-cluster mapping
-#     if text in content_to_cluster_id:
-#         # Directly add this matching record to the list
-#         qualifying_matching_records.append(record)
-# 
-# # Save the qualifying matching records into a new JSON file with indent=4
-# output_file_path_matching = 'qualifying_matching_records.json'
-# with open(output_file_path_matching, 'w') as outfile:
-#     json.dump(qualifying_matching_records, outfile, indent=4)
-# 
-# 
-# print('Write ', output_file_path_matching)
-
-# # This time, we will check each record individually instead of adding all records with a matching variant_id
-# individual_qualifying_records = []
-# for record in ldlr_test_data:
-#     variant_id = record['variant_id']
-#     text = record['condition']['text'].lower()
-#     # Check if the text of the current record is in any content fields of clusters
-#     if text in content_to_cluster_id:
-#         # Add this record to individual_qualifying_records
-#         individual_qualifying_records.append(record)
-# 
-# # Save the individual qualifying records into a new JSON file with indent=4
-# output_file_path_individual = 'individual_qualifying_records.json'
-# with open(output_file_path_individual, 'w') as outfile:
-#     json.dump(individual_qualifying_records, outfile, indent=4)
-
-
-# print('Write ', output_file_path_individual)
