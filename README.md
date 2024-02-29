@@ -58,6 +58,21 @@ DBSCAN  | Density-Based Spatial Clustering of Applications with Noise
 GPT  | Generative Pre-trained Transformer
 HGNC  | HUGO Gene Nomenclature Committee
 HGVS  |	Human Genome Variation Society
+HI  |	Haploinsufficiency
+HUGO  |	Human Genome Organization
+LLM  |	Large Language Model
+MeSH  |	Medical Subject Headings
+NGS  | Next-Generation Sequencing
+NLP  | Natural Language Processing
+OMIM  |	Online Mendelian Inheritance in Man
+PMC  | PubMed Central
+RCV  |	Reference (variant-condition) ClinVar Variant Accession Identifier
+SCV  |	Submitted ClinVar Variant Accession Identifier
+SNP  |	Single-Nucleotide Polymorphism
+SRA  |	Sequence Read Archive
+TS  |	Triplosensitivity
+VUS  |	Variant of Uncertain Significance
+VCV  |	Variant ClinVar Variant Accession Identifier
 
 ## NCBI Codeathon Disclaimer
 This software was created as part of an NCBI codeathon, a hackathon-style event focused on rapid innovation. While we encourage you to explore and adapt this code, please be aware that NCBI does not provide ongoing support for it.
