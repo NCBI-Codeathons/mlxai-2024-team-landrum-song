@@ -4,30 +4,28 @@ nextflow.enable.dsl = 2
 
 
 // prints to the screen and to the log
-log.info	"""
+log.info """
+         ██████ ██      ██ ███    ██  ██████ ██      ██    ██ ███████ ████████ ███████ ██████
+        ██      ██      ██ ████   ██ ██      ██      ██    ██ ██         ██    ██      ██   ██
+        ██      ██      ██ ██ ██  ██ ██      ██      ██    ██ ███████    ██    █████   ██████
+        ██      ██      ██ ██  ██ ██ ██      ██      ██    ██      ██    ██    ██      ██   ██
+         ██████ ███████ ██ ██   ████  ██████ ███████  ██████  ███████    ██    ███████ ██   ██
 
 
-             ██████ ██      ██ ███    ██  ██████ ██      ██    ██ ███████ ████████ ███████ ██████
-            ██      ██      ██ ████   ██ ██      ██      ██    ██ ██         ██    ██      ██   ██
-            ██      ██      ██ ██ ██  ██ ██      ██      ██    ██ ███████    ██    █████   ██████
-            ██      ██      ██ ██  ██ ██ ██      ██      ██    ██      ██    ██    ██      ██   ██
-             ██████ ███████ ██ ██   ████  ██████ ███████  ██████  ███████    ██    ███████ ██   ██
+        ClinCluster (version 0.1.0)
+        A pipeline for clustering ClinVar condition entries into groups based on whether they
+        are alternate names for the same underlying condition. The pipeline uses an LLM DBSCAN
+        to assign cluster indices to each condition in input variants for a given gene.
+        ===================================
+        gene list       : ${params.genelist}
+        results_dir     : ${params.results}
+        user email      : ${params.email}
+        tuning param    : ${params.tuningparam}
 
-
-			ClinCluster (version 0.1.0)
-            A pipeline for clustering ClinVar condition entries into groups based on whether they
-            are alternate names for the same underlying condition. The pipeline uses an LLM DBSCAN
-            to assign cluster indices to each condition in input variants for a given gene.
-			===================================
-			gene list       : ${params.genelist}
-			results_dir     : ${params.results}
-			user email      : ${params.email}
-			tuning param    : ${params.tuningparam}
-			scripts dir     : ${params.scripts}
-
-			[cleanup        : ${params.cleanup}]
-			"""
-			.stripIndent()
+        [debug mode     : ${params.debugmode}]
+        [cleanup        : ${params.cleanup}]
+        """
+        .stripIndent()
 
 
 // WORKFLOW SPECIFICATION
@@ -45,12 +43,8 @@ workflow {
         ch_genelist
     )
 
-    LLM_EMBEDDINGS (
-        RETRIEVE_DATA.out
-    )
-
     CLUSTER_WITH_LLM (
-        LLM_EMBEDDINGS.out
+        RETRIEVE_DATA.out
     )
 
     FIND_QUALIFYING_RECORDS (
@@ -69,6 +63,14 @@ workflow {
 
 // DERIVATIVE PARAMETER SPECIFICATION
 // --------------------------------------------------------------- //
+
+// Using debugmode setting to decide how to handle errors
+if ( params.debugmode == true ){
+	params.errorMode = 'terminate'
+} else {
+	params.errorMode = 'ignore'
+}
+
 // Additional parameters that are derived from parameters set in nextflow.config
 params.retrieved = params.results + "/01_retrieved_data"
 params.embeddings = params.results + "/02_llm_embeddings"
@@ -89,6 +91,9 @@ process RETRIEVE_DATA {
 	tag "${gene}"
 	publishDir params.retrieved, mode: 'copy', overwrite: true
 
+	errorStrategy { sleep(Math.pow(2, task.attempt) * 100 as long); return 'retry' }
+	maxRetries 2
+
 	input:
 	val gene
 
@@ -104,16 +109,19 @@ process RETRIEVE_DATA {
 	"""
 }
 
-process LLM_EMBEDDINGS {
+process CLUSTER_WITH_LLM {
 
 	tag "${gene}"
-	publishDir params.embeddings, mode: 'copy', overwrite: true
+	publishDir params.verified, mode: 'copy', overwrite: true
+
+	errorStrategy { task.attempt < 3 ? 'retry' : params.errorMode }
+	maxRetries 2
 
 	input:
 	tuple val(gene), path(unique_conditions), path(full_variants)
 
 	output:
-	tuple val(gene), path("${gene}.db"), path(full_variants)
+	tuple val(gene), path("${gene}_clusters.json"), path(full_variants)
 
 	script:
 	"""
@@ -122,24 +130,9 @@ process LLM_EMBEDDINGS {
     --database ${gene}.db \
     --model sentence-transformers/all-MiniLM-L6-v2 \
     --store
-	"""
-}
 
-process CLUSTER_WITH_LLM {
-
-	tag "${gene}"
-	publishDir params.verified, mode: 'copy', overwrite: true
-
-	input:
-	tuple val(gene), path(llm_db), path(full_variants)
-
-	output:
-	tuple val(gene), path("${gene}_clusters.json"), path(full_variants)
-
-	script:
-	"""
 	llm cluster diseases \
-    --database ${llm_db}.db \
+    --database ${gene}.db \
     ${params.tuningparam} > ${gene}_clusters.json
 	"""
 }
@@ -148,6 +141,9 @@ process FIND_QUALIFYING_RECORDS {
 
 	tag "${gene}"
 	publishDir params.remapped, mode: 'copy', overwrite: true
+
+	errorStrategy { task.attempt < 3 ? 'retry' : params.errorMode }
+	maxRetries 2
 
 	input:
 	tuple val(gene), path(llm_clusters), path(full_variants)
