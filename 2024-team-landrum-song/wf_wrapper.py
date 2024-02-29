@@ -4,16 +4,19 @@
 TODO
 """
 
+import sys
 import argparse
 import functools
+import subprocess
 from pathlib import Path
 from typing import Dict, List, Set, Tuple
 
 from flytekit import map_task, task, workflow
-from rich import print as rprint
+from flytekit.types.file import FlyteFile
+from rich.pretty import pprint as rprint
 
-from .pull_and_extract_clinvar import pull_and_extract_data
-# from .llm_cluster import register_commands
+from .pull_and_extract_clinvar import pull_and_extract_data, save_variant_json
+from .check_duplicate import deduplicate_in_clusters
 
 
 def parse_command_line_args() -> Tuple[Path, str]:
@@ -40,7 +43,7 @@ def parse_command_line_args() -> Tuple[Path, str]:
         "-t",
         type=float,
         required=False,
-        default=1.2,
+        default=1.0,
         help="Email for NCBI ClinVar tracking purposes.",
     )
     args = parser.parse_args()
@@ -49,7 +52,7 @@ def parse_command_line_args() -> Tuple[Path, str]:
 
 
 @task
-def retrieve_data(query_gene: str, _email: str) -> List[Dict]:
+def retrieve_data(query_gene: str, _email: str) -> Tuple[str, str]:
     """
     Use the entrez Python API to retrieve data from NCBI ClinVar
     for a given gene. This is the chief source of network I/O in
@@ -61,7 +64,10 @@ def retrieve_data(query_gene: str, _email: str) -> List[Dict]:
     # extract the relevant data as a list of dictionaries
     extracted_data = pull_and_extract_data(query_gene, _email)
 
-    return extracted_data
+    # write to a JSON
+    json_out = save_variant_json(query_gene, extracted_data)
+
+    return query_gene, json_out
 
 
 @task
@@ -78,35 +84,57 @@ def extract_condition_set(data: List[Dict]) -> Set[str]:
 
 
 @task
-def prompt_llm() -> None:
+def prompt_llm(_condition_set: Set[str]) -> FlyteFile:
     """
-    Automatically synthesize a prompt for an LLM and send it in,
-    collecting its responses
-    """
-    condition_set = set(["test1", "test2"])
-
-    prompt_template = """
-    Can you take the following disease names and sort them into a nested
-    JSON where diseases that are subtypes of other diseases in the list
-    are nested within those diseases? I want to create a JSON map of
-    disease types and subtypes so that diseases with slightly different
-    names aren't treated as entirely different diseases in my database.
+    Prompt a language model to perform Density-Based Spatial
+    Clustering of Applications with Noise (DBSCAN) on the condition
+    set for the current gene and extract cluster indices.
     """
 
-    _llm_prompt = f"{prompt_template}\n\n{condition_set}"
+    cluster_json_path = "condition_clusters.json"
 
-    # # command 1
-    # llm embed-multi diseases  test2.json  --database tmp.db  --model  sentence-transformers/all-MiniLM-L6-v2 --store
+    # command 1
+    command1 = (
+        "llm",
+        "embed-multi",
+        "diseases",
+        "test2.json",
+        "--database",
+        "tmp.db",
+        "--model",
+        "sentence-transformers/all-MiniLM-L6-v2",
+        "--store",
+    )
+    llm_embed_process = subprocess.Popen(command1, stdout=subprocess.PIPE)
 
-    # # command 2
-    # llm cluster diseases --database tmp.db 1
+    # command 2
+    command2 = ("llm", "cluster", "diseases", "--database", "tmp.db", "1")
+    llm_cluster_process = subprocess.Popen(command2, stdout=cluster_json_path)
+
+    # Allow vcftools to receive a SIGPIPE if gzip exits
+    if llm_embed_process.stdout:
+        llm_embed_process.stdout.close()
+
+    # Wait for processes to complete and get their exit codes and stderr
+    _, embed_stderr = llm_cluster_process.communicate()
+    _, cluster_stderr = llm_cluster_process.communicate()
+
+    if llm_embed_process.returncode != 0 or llm_cluster_process.returncode != 0:
+        rprint("LLM clustering failed. See errors below:")
+        rprint(f"Embedding stderr:\{embed_stderr}")
+        rprint(f"Clustering stderr:\{cluster_stderr}")
+        sys.exit(1)
+
+    return FlyteFile(path=cluster_json_path)
 
 
 @task
-def parse_response() -> None:
+def parse_and_dedup_response(_cluster_json: FlyteFile) -> None:
     """
     TODO
     """
+
+    deduplicate_in_clusters("test")
 
 
 @task
@@ -148,16 +176,13 @@ def main() -> None:
     llm_responses = map_task(prompt_llm)(condition_sets)
 
     # parse responses into JSON formats
-    # sorted_conditions = map_task(parse_response)(llm_responses)
-    sorted_conditions = [parse_response() for response in llm_responses]
+    sorted_conditions = map_task(parse_and_dedup_response)(llm_responses)
 
     # remap the new top-level disease names onto the original clinvar data
-    # final_mappings = map_task(map_back_to_clinvar)(sorted_conditions)
-    final_mappings = [map_back_to_clinvar() for cond in sorted_conditions]
+    _final_mappings = map_task(map_back_to_clinvar)(sorted_conditions)
 
     # write out results for manual review
     # _ = map_task(write_out_results)(final_mappings)
-    _ = [write_out_results() for mapping in final_mappings]
 
 
 if __name__ == "__main__":

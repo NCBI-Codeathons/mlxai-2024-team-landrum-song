@@ -145,7 +145,7 @@ async def pull_and_extract_data(gene: str, email: str) -> List[Dict]:
     return data
 
 
-async def save_variant_xml(gene: str, data: List) -> None:
+async def save_variant_xml(gene: str, data: List) -> str:
     """
     Save the extracted variant XML data for the purposes of this codeathon.
     """
@@ -171,8 +171,10 @@ async def save_variant_xml(gene: str, data: List) -> None:
         os.remove(xml_filename)
     tree.write(xml_filename, encoding="UTF-8", xml_declaration=True)
 
+    return xml_filename
 
-async def save_variant_json(gene: str, data) -> None:
+
+async def save_variant_json(gene: str, data) -> str:
     """
     Save the extracted variant data in JSON format for the purposes of this codeathon.
     """
@@ -182,6 +184,8 @@ async def save_variant_json(gene: str, data) -> None:
     with open(json_filename, "w", encoding="utf-8") as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
     rprint(f"Saved variant information to {json_filename}")
+
+    return json_filename
 
 
 async def main() -> None:
@@ -201,8 +205,8 @@ async def main() -> None:
     # process each gene asynchronously
     for gene in genes:
         extracted_data = await pull_and_extract_data(gene, email)
-        await save_variant_xml(gene, extracted_data)
-        await save_variant_json(gene, extracted_data)
+        _ = await save_variant_xml(gene, extracted_data)
+        _ = await save_variant_json(gene, extracted_data)
         rprint(f"Data retrieval, extraction, and writing complete for {gene}")
 
 
