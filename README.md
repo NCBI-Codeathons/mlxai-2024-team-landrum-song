@@ -48,6 +48,13 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 
 ## Future Work
 
+## Common Acronyms
+
+Abbreviation | Acronym
+------------   -------
+ACMG         | American College of Medical Genetics and Genomics
+DBSCAN       | Density-Based Spatial Clustering of Applications with Noise 
+
 ## NCBI Codeathon Disclaimer
 This software was created as part of an NCBI codeathon, a hackathon-style event focused on rapid innovation. While we encourage you to explore and adapt this code, please be aware that NCBI does not provide ongoing support for it.
 
