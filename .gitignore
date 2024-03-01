@@ -107,3 +107,4 @@ data/
 input/
 test/
 dev/
+.mypy_cache/

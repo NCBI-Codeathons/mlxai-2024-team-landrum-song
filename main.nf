@@ -18,7 +18,7 @@ log.info """
         to assign cluster indices to each condition in input variants for a given gene.
         ===================================
         gene list       : ${params.genelist}
-        results_dir     : ${params.results}
+        results dir     : ${params.results}
         user email      : ${params.email}
         tuning param    : ${params.tuningparam}
 
@@ -51,9 +51,9 @@ workflow {
         CLUSTER_WITH_LLM.out
     )
 
-    // MAP_TO_ORIGINAL_DATA (
-    //     FIND_QUALIFYING_RECORDS.out
-    // )
+    MAP_TO_ORIGINAL_DATA (
+        CLUSTER_WITH_LLM.out
+    )
 
 
 }
@@ -73,9 +73,8 @@ if ( params.debugmode == true ){
 
 // Additional parameters that are derived from parameters set in nextflow.config
 params.retrieved = params.results + "/01_retrieved_data"
-params.embeddings = params.results + "/02_llm_embeddings"
-params.clusters = params.results + "/03_unverified_clusters"
-params.verified = params.results + "/04_qualifying_clusters"
+params.clusters = params.results + "/02_unverified_clusters"
+params.verified = params.results + "/03_qualifying_clusters"
 params.remapped = params.results + "/05_clinvar_with_clusters"
 
 // --------------------------------------------------------------- //
@@ -101,7 +100,6 @@ process RETRIEVE_DATA {
 	tuple val(gene), path("${gene}_formatted_unique_conditions.json"), path("${gene}_variants_extracted.json")
 
 	script:
-    println("Retrieving data for the ${gene}")
 	"""
 	pull_and_extract_clinvar.py \
     --gene ${gene} \
@@ -140,7 +138,7 @@ process CLUSTER_WITH_LLM {
 process FIND_QUALIFYING_RECORDS {
 
 	tag "${gene}"
-	publishDir params.remapped, mode: 'copy', pattern: "*qualifying*", overwrite: true
+	publishDir params.verified, mode: 'copy', pattern: "*qualifying*", overwrite: true
 
 	errorStrategy { task.attempt < 3 ? 'retry' : params.errorMode }
 	maxRetries 2
@@ -155,6 +153,30 @@ process FIND_QUALIFYING_RECORDS {
 	"""
 	check_duplicate.py ${gene}
 	"""
+}
+
+process MAP_TO_ORIGINAL_DATA {
+
+    tag "${gene}"
+	publishDir params.remapped, mode: 'copy', pattern: "*qualifying*", overwrite: true
+
+	errorStrategy { task.attempt < 3 ? 'retry' : params.errorMode }
+	maxRetries 2
+
+	input:
+	tuple val(gene), path(llm_clusters), path(full_variants)
+
+	output:
+	tuple val(gene), path("*"), path(full_variants)
+
+	script:
+	"""
+	aggregate_by_rcv.py \
+    --variants_path ${full_variants} \
+    --cluster_path ${llm_clusters} \
+    --gene ${gene}
+	"""
+
 }
 
 // --------------------------------------------------------------- //
