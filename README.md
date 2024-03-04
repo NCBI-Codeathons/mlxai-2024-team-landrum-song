@@ -61,6 +61,9 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 
 ## Future Work
 
+## Demo
+![demo](assets/demo.gif)
+
 ## Common Acronyms
 Abbreviation  | Acronym
 ------------- | -------------
@@ -84,9 +87,6 @@ SRA  |	Sequence Read Archive
 TS  |	Triplosensitivity
 VUS  |	Variant of Uncertain Significance
 VCV  |	Variant ClinVar Variant Accession Identifier
-
-## Demo
-![demo](assets/demo.gif)
 
 ## NCBI Codeathon Disclaimer
 This software was created as part of an NCBI codeathon, a hackathon-style event focused on rapid innovation. While we encourage you to explore and adapt this code, please be aware that NCBI does not provide ongoing support for it.
