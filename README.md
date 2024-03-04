@@ -14,6 +14,13 @@ List of participants and affiliations:
 
 ## Project Goals
 Naming for human genetic diseases is complex. Diseases may be named for the phenotype; other information may be alluded to including the relevant gene, mode of inheritance, or the mechanism of disease. Diseases may be described at a high level with a generic name, or at a lower level with a more specific name; however, in the context of a variant in a specific gene, these differences may not be considered important. ClinVar data would be easier to ingest in bulk and to read in web displays if there were a meaningful way to aggregate diseases that effectively mean the same thing in the context of a gene.
+
+* Problem Statement: Diseases in ClinVar are very granular and result in many variant-disease records.
+
+* Can we use an ML/AI approach to aggregate disease terms in ClinVar to reduce the number of variant-disease records?
+
+<img src="blob:chrome-untrusted://media-app/fbe68637-1b01-449f-855b-8d81af81feda" alt="clinVar RSV table.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/a21c9b00-f53c-40eb-9450-4bfc5d4059b0)
+Example of granularity for familial Hypercholesterolemia
 ## Approach
 Develop a ML/AI approach to aggregating diseases for 5 genes with variants in ClinVar: LDLR, KCNQ1, USH2A, SCN5A, TSC1.
 
