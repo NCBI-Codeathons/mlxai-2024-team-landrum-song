@@ -53,7 +53,8 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 
 ## Results
 
-<img src="blob:chrome-untrusted://media-app/56f48609-672e-48c8-8364-1eb1882696e4" alt="Performance Metrics .jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/b9c5d6d7-64a1-4f3d-90b2-577d2a49a7cc)
+<img src="blob:chrome-untrusted://media-app/9daddab5-5afe-4f3a-a753-620f062dfb11" alt="ClinCluster_ Performance metric 1.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/43c7f45b-b206-491d-84f5-7078aea5fbc2)
+
 
 <img src="blob:chrome-untrusted://media-app/58971bc3-e14d-4f40-b58f-8fb3a3881d55" alt="Interactive Clustering.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/2fee04d6-d65d-448f-bad1-2851faf23637)
 
