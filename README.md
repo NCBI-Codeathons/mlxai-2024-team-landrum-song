@@ -36,10 +36,6 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 
 <img src="blob:chrome-untrusted://media-app/b35f5ebe-0225-4c84-bbed-cf7d2d8b0d62" alt="Use LLM to aggregate these similar disease terms.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/0d015ce5-ce49-41e2-aafc-dfa83c3c818a)
 
-
-
-<img src="blob:chrome-untrusted://media-app/03eb0034-22d4-4894-8461-42ecad647455" alt="Use LLM to aggregate these similar disease terms.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/2eb07c2a-a678-40a9-b584-70073df4e426)
-
 <img src="blob:chrome-untrusted://media-app/8428382f-fad0-428a-a345-3ed8c32cd871" alt="DBSCAN_ cluster the disease names.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/fcbfacd5-d0bc-4d14-8368-1e02b8e53c63)
 
 ### Aggregating the disease terms
