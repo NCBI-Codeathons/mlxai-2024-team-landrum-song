@@ -28,7 +28,7 @@ Develop a ML/AI approach to aggregating diseases for 5 genes with variants in Cl
 
 * Use the gene symbol to guide whether different terms are meaningfully different for that gene, e.g. Familial hypercholesterolemia vs Hypercholesterolemia, familial, 1
 
-* Use other information such as mode of inheritance, clinical features, mechanism of disease to decide if terms should be aggregated or not
+* Use other information such as mode of inheritance, clinical features, and mechanism of disease to decide if terms should be aggregated or not
 
 If time, demonstrate how RCV records for variant-condition pairs in ClinVar for one or more genes would be different using aggregated diseases.
 
@@ -59,10 +59,15 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 
 <img src="blob:chrome-untrusted://media-app/8108419f-cf60-4f2c-8d8d-cfab34293e66" alt="ClinCluster_ Performance metric 3 curation.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/1b22e735-3959-464a-a111-0ee971d5f45e)
 
-## Future Work
-
 ## Demo
 ![demo](assets/demo.gif)
+
+## Future Work
+* Evaluate and test other LLMs with more training in biomedical knowledge to reduce the amount of curation needed
+
+* Generate a test set of ClinVar data using aggregated disease terms
+
+* Review test data set with ClinVar users to determine the value added and areas to improve
 
 ## Common Acronyms
 Abbreviation  | Acronym
