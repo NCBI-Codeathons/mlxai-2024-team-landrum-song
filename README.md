@@ -36,7 +36,8 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 
 <img src="blob:chrome-untrusted://media-app/b35f5ebe-0225-4c84-bbed-cf7d2d8b0d62" alt="Use LLM to aggregate these similar disease terms.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/0d015ce5-ce49-41e2-aafc-dfa83c3c818a)
 
-<img src="blob:chrome-untrusted://media-app/8428382f-fad0-428a-a345-3ed8c32cd871" alt="DBSCAN_ cluster the disease names.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/fcbfacd5-d0bc-4d14-8368-1e02b8e53c63)
+<img src="blob:chrome-untrusted://media-app/0cf52546-5a03-4628-a38c-bad595b0234e" alt="DBSCAN_cluster the disease names.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/1ba62094-40fb-437f-98fa-f07a6c35f62b)
+
 
 ### Aggregating the disease terms
 1. Extract disease names from all RCV records associated with a single gene
