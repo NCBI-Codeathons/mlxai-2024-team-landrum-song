@@ -55,8 +55,8 @@ If time, demonstrate how RCV records for variant-condition pairs in ClinVar for 
 
 <img src="blob:chrome-untrusted://media-app/9daddab5-5afe-4f3a-a753-620f062dfb11" alt="ClinCluster_ Performance metric 1.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/43c7f45b-b206-491d-84f5-7078aea5fbc2)
 
+<img src="blob:chrome-untrusted://media-app/88c02bb0-a74f-43b0-ba71-24792d2572a5" alt="LLM clustering is not perfect.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/6a6d4e0e-49b1-4ab9-a35b-4c9bbea3bab0)
 
-<img src="blob:chrome-untrusted://media-app/58971bc3-e14d-4f40-b58f-8fb3a3881d55" alt="Interactive Clustering.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/2fee04d6-d65d-448f-bad1-2851faf23637)
 
 ## Future Work
 
