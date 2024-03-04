@@ -32,6 +32,8 @@ Develop a ML/AI approach to aggregating diseases for 5 genes with variants in Cl
 
 If time, demonstrate how RCV records for variant-condition pairs in ClinVar for one or more genes would be different using aggregated diseases.
 
+<img src="blob:chrome-untrusted://media-app/b35f5ebe-0225-4c84-bbed-cf7d2d8b0d62" alt="Use LLM to aggregate these similar disease terms.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/0d015ce5-ce49-41e2-aafc-dfa83c3c818a)
+
 <img src="https://files.slack.com/files-pri/T06HWPPPTT8-F06M8R2JEE5/ncbi-clinvar-llm-dag.png" alt="NCBI-clinvar-llm-dag.png"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/bf3d92be-a132-4af9-bec1-87b287966d5b)
 
 <img src="blob:chrome-untrusted://media-app/03eb0034-22d4-4894-8461-42ecad647455" alt="Use LLM to aggregate these similar disease terms.jpg"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/2eb07c2a-a678-40a9-b584-70073df4e426)
