@@ -28,7 +28,7 @@ Develop a ML/AI approach to aggregating diseases for 5 genes with variants in Cl
 
 * Use other information such as mode of inheritance, clinical features, and mechanism of disease to decide if terms should be aggregated or not
 
-* Demonstrate how RCV records for variant-condition pairs in ClinVar for one or more genes would be different using aggregated diseases.
+* Demonstrate how RCV records for variant-condition pairs in ClinVar for one or more genes would be different using aggregated diseases
 
 <img src="https://files.slack.com/files-pri/T06HWPPPTT8-F06M8R2JEE5/ncbi-clinvar-llm-dag.png" alt="NCBI-clinvar-llm-dag.png"/>![image](https://github.com/NCBI-Codeathons/mlxai-2024-team-landrum-song/assets/34135674/bf3d92be-a132-4af9-bec1-87b287966d5b)
 
