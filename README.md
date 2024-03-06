@@ -71,6 +71,7 @@ Develop a ML/AI approach to aggregating diseases for 5 genes with variants in Cl
 Abbreviation  | Acronym
 ------------- | -------------
 ACMG  | American College of Medical Genetics and Genomics
+CGV  | Comparative Genome Viewer
 DBSCAN  | Density-Based Spatial Clustering of Applications with Noise
 GPT  | Generative Pre-trained Transformer
 HGNC  | HUGO Gene Nomenclature Committee
